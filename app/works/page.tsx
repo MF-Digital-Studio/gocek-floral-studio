@@ -1,0 +1,5 @@
+import { RouteFrame, PageHero, imageSet } from '@/components/site-shell'
+
+const works = [['Aegean Light', 'Private commission · Göcek', imageSet.white], ['Soft Geometry', 'Space florals · 2024', imageSet.studio], ['The Garden Table', 'Event design · Dalaman', imageSet.garden], ['Wild Ceremony', 'Wedding flowers · Kabak', imageSet.ceremony]]
+
+export default function WorksPage() { return <RouteFrame><PageHero eyebrow="Selected works · Floral stories" title={<>A collection of<br /><em>quiet gestures.</em></>} image={imageSet.ceremony} alt="Floral ceremony installation" /><section className="section-shell route-works"><div className="route-intro"><p className="eyebrow">Selected commissions</p><p>Arrangements, celebrations and spaces shaped by the character of their setting.</p></div><div className="works-grid">{works.map(([title, meta, image], index) => <a className={`work-item ${index % 2 ? 'work-small' : 'work-large'}`} href="/contact" key={title}><div className="work-image image-frame"><img src={image} alt={title} /></div><div className="work-caption"><h3>{title}</h3><p>{meta}</p><span>↗</span></div></a>)}</div></section></RouteFrame> }
