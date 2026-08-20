@@ -40,8 +40,8 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="tr" className="bg-background">
-      <body className={`${bebas.variable} ${cormorant.variable} ${inter.variable} antialiased`}>
+    <html lang="tr" className="bg-background" suppressHydrationWarning>
+      <body className={`${bebas.variable} ${cormorant.variable} ${inter.variable} antialiased`} suppressHydrationWarning>
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

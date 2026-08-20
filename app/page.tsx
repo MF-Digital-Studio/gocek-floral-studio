@@ -2,6 +2,7 @@
 
 import { SiteFooter, SiteHeader } from '@/components/site-shell'
 import { FloralCornerTL, FloralCornerBR } from '@/components/floral-decorations'
+import { ServicesSpotlight } from '@/components/services-spotlight'
 
 const works = [
   { title: 'Gül & Bahçe Buketi', meta: 'Renkli Kır Buketi · Göcek', image: '/flower-1.png' },
@@ -19,10 +20,55 @@ const works = [
 ]
 
 const services = [
-  ['01', 'Özel Çiçek Buketleri', 'Doğum günleri, yıldönümleri, tebrikler ve sevdikleriniz için mağazamızda özenle hazırlanan günlük taze buketler.'],
-  ['02', 'Ev & Villa Çiçekleri', 'Yaşam alanlarınıza canlılık katan vazo aranjmanları, orkide ve taze masa düzenlemeleri.'],
-  ['03', 'Yat & Tekne Çiçekleri', 'Deniz konseptine uygun, uzun süre formunu ve tazeliğini koruyan özel tekne ve yat aranjmanları.'],
-  ['04', 'Düğün & Davet Tasarımı', 'Kutlamalar, partiler ve özel günler için kişiye ve mekana özel konsept çiçek dekorasyonu.'],
+  {
+    number: '01',
+    title: 'Özel Çiçek Buketleri',
+    desc: 'Doğum günleri, yıldönümleri, tebrikler ve sevdikleriniz için mağazamızda özenle hazırlanan günlük taze buketler.',
+    image: '/flower-1.png',
+    tag: 'Taze Buket',
+  },
+  {
+    number: '02',
+    title: 'Gelin El Çiçeği',
+    desc: 'En özel gününüz için tarzınıza ve konseptinize uygun özenle tasarlanan taze gelin buketleri ve yaka çiçekleri.',
+    image: '/service-bridal.jpg',
+    tag: 'Düğün & Gelin',
+  },
+  {
+    number: '03',
+    title: 'Ev & Villa Çiçekleri',
+    desc: 'Yaşam alanlarınıza canlılık katan vazo aranjmanları, orkide ve taze masa düzenlemeleri.',
+    image: '/flower-5.png',
+    tag: 'Mekan & Dekor',
+  },
+  {
+    number: '04',
+    title: 'Yat & Tekne Çiçekleri',
+    desc: 'Deniz konseptine uygun, uzun süre formunu ve tazeliğini koruyan özel tekne ve yat aranjmanları.',
+    image: '/flower-9.png',
+    tag: 'Marina & Yat',
+  },
+  {
+    number: '05',
+    title: 'Düğün & Davet Tasarımı',
+    desc: 'Kutlamalar, partiler ve özel günler için kişiye ve mekana özel konsept çiçek dekorasyonu.',
+    image: '/flower-6.png',
+    tag: 'Organizasyon',
+  },
+  {
+    number: '06',
+    title: 'Gelin Arabası Süsleme',
+    desc: 'Düğün ve özel günleriniz için şık, estetik ve mevsime uygun taze çiçeklerle araç süsleme hizmeti.',
+    image: '/service-car.jpg',
+    tag: 'Araç Süsleme',
+  },
+  {
+    number: '07',
+    title: 'Helyum Gazlı Balon',
+    desc: 'Kutlama, doğum günü ve özel sürprizler için renkli ve kaliteli helyum gazlı balon tasarımları.',
+    image: '/service-balloon.jpg',
+    tag: 'Balon & Sürpriz',
+  },
 ]
 
 const gallery = [
@@ -64,7 +110,6 @@ export default function Page() {
       <section id="about" className="intro section-shell">
         <FloralCornerTL />
         <FloralCornerBR />
-        <div className="section-kicker"><span>01</span><span>Hakkımızda</span></div>
         <div className="intro-grid">
           <div className="intro-copy">
             <h2 className="section-title">Hakkımızda</h2>
@@ -82,7 +127,6 @@ export default function Page() {
       <section id="works" className="works section-shell">
         <div className="section-heading">
           <div>
-            <div className="section-kicker"><span>02</span><span>Çalışmalarımız</span></div>
             <h2 className="section-title">Koleksiyon</h2>
           </div>
           <a className="text-link desktop-only" href="/works">Tüm Çalışmalar <span>↗</span></a>
@@ -111,21 +155,11 @@ export default function Page() {
       <section id="services" className="services section-shell">
         <div className="services-top">
           <div>
-            <div className="section-kicker"><span>03</span><span>Hizmetler</span></div>
             <h2 className="section-title">Hizmetlerimiz</h2>
           </div>
           <p className="services-lead">Bireysel hediyelik buketlerden villa, tekne ve davet organizasyonlarına kadar mağazamızda hazırlanan taze çiçek tasarımları.</p>
         </div>
-        <div className="service-list">
-          {services.map(([number, title, copy]) => (
-            <article className="service-row" key={title}>
-              <span className="service-number">{number}</span>
-              <h3>{title}</h3>
-              <p>{copy}</p>
-              <span className="service-arrow">↗</span>
-            </article>
-          ))}
-        </div>
+        <ServicesSpotlight />
       </section>
 
       <section className="statement">
@@ -141,7 +175,6 @@ export default function Page() {
           <img src="/about.png" alt="Göcek Marine Flowers Çiçek Mağazası" onError={(e) => { e.currentTarget.style.display = 'none' }} />
         </div>
         <div className="studio-copy">
-          <div className="section-kicker"><span>04</span><span>Mağazamız</span></div>
           <h2 className="section-title">Mağazamız</h2>
           <p>Göcek merkezdeki çiçek mağazamızda günlük taze buketlerden marina ve villa düzenlemelerine kadar geniş bir yelpazede hizmet veriyoruz. Bireysel hediye siparişlerinizde ve tüm özel anlarınızda en taze çiçekleri özenle hazırlıyoruz.</p>
           <a className="text-link" href="/about">Hakkımızda Detaylı Bilgi <span>↗</span></a>
@@ -151,7 +184,6 @@ export default function Page() {
       <section className="gallery section-shell">
         <div className="gallery-heading">
           <div>
-            <div className="section-kicker"><span>05</span><span>Fotoğraflar</span></div>
             <h2 className="section-title">Galeri</h2>
           </div>
           <a className="text-link" href="https://instagram.com" target="_blank" rel="noreferrer">Instagram'da Takip Edin <span>↗</span></a>
@@ -167,7 +199,6 @@ export default function Page() {
 
       <section id="contact" className="contact">
         <div className="section-shell contact-inner">
-          <div className="section-kicker"><span>06</span><span>Bize Ulaşın</span></div>
           <h2 className="section-title">İletişim</h2>
           <div className="contact-details">
             <div>
