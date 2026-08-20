@@ -1,4 +1,4 @@
-import { RouteFrame, PageHero, imageSet } from '@/components/site-shell'
+import { OrderCta, RouteFrame, PageHero, imageSet } from '@/components/site-shell'
 
 const works = [
   ['Gül & Bahçe Buketi', 'Renkli Kır Buketi · Göcek', '/flower-1.png'],
@@ -41,6 +41,7 @@ export default function WorksPage() {
           ))}
         </div>
       </section>
+      <OrderCta />
     </RouteFrame>
   )
 }

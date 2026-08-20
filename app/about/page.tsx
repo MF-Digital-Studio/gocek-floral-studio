@@ -1,4 +1,4 @@
-import { PageHero, RouteFrame, imageSet } from '@/components/site-shell'
+import { OrderCta, PageHero, RouteFrame, imageSet } from '@/components/site-shell'
 
 export default function AboutPage() {
   return (
@@ -53,24 +53,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Unified Bottom CTA */}
-      <section className="services-cta-section">
-        <div className="services-cta-card">
-          <span className="section-kicker" style={{ color: 'rgba(28, 40, 51, 0.7)' }}>Göcek Marine Flowers</span>
-          <h2 className="services-cta-title">Çiçek Siparişiniz İçin Bize Ulaşın</h2>
-          <p className="services-cta-copy">
-            Bireysel hediye buketleriniz, villa ve tekne siparişleriniz için WhatsApp'tan yazabilir veya atölyemize uğrayabilirsiniz.
-          </p>
-          <div className="services-cta-buttons">
-            <a href="https://wa.me/905352153000" target="_blank" rel="noreferrer" className="services-cta-btn services-cta-wa">
-              WhatsApp'tan Yazın ↗
-            </a>
-            <a href="/contact" className="services-cta-btn services-cta-call">
-              İletişim & Konum ↗
-            </a>
-          </div>
-        </div>
-      </section>
+      <OrderCta />
     </RouteFrame>
   )
 }
