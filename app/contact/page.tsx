@@ -1,3 +1,107 @@
 import { RouteFrame, PageHero, imageSet } from '@/components/site-shell'
 
-export default function ContactPage() { return <RouteFrame><PageHero eyebrow="Bize Ulaşın · Göcek" title={<>İletişim</>} image={imageSet.garden} alt="Botanik yeşillikler ve güneş ışığı" /><section className="contact-page section-shell"><div className="contact-page-grid"><h2 className="section-title">İletişim</h2><div className="route-copy"><p>İster bir düğün planlıyor, ister bir mekanı şekillendiriyor veya özel bir tasarım arıyor olun, sizden haber almayı çok isteriz.</p><div className="contact-details contact-page-details"><div><p className="eyebrow">Adres</p><p>Göcek, Muğla<br />Türkiye</p></div><div><p className="eyebrow">İletişim</p><a href="mailto:hello@lumefloral.com">hello@lumefloral.com</a><a href="tel:+902524000000">+90 252 400 00 00</a><a href="https://wa.me/902524000000">WhatsApp ↗</a></div><div><p className="eyebrow">Saatler</p><p>Pazartesi — Cumartesi<br />09:00 — 18:00</p></div></div></div></div></section></RouteFrame> }
+export default function ContactPage() {
+  return (
+    <RouteFrame>
+      <PageHero
+        eyebrow="Bize Ulaşın · Göcek"
+        title={<>İletişim & Konum</>}
+        image={imageSet.garden}
+        alt="Göcek Marine Flowers iletişim"
+      />
+      <section className="contact section-shell">
+        <div className="contact-container">
+          <div className="contact-info-side">
+            <span className="section-kicker">Göcek · Muğla</span>
+            <h2 className="section-title">İletişim & Konum</h2>
+            <p className="contact-lead">
+              Göcek merkezdeki çiçek atölyemize bekleriz. Taze çiçek siparişi, villa & tekne düzenlemeleri için doğrudan arayabilir veya WhatsApp'tan yazabilirsiniz.
+            </p>
+
+            <div className="contact-editorial-list">
+              {/* Phone Hero Row */}
+              <div className="contact-editorial-row">
+                <span className="contact-label">Hızlı Sipariş & İletişim</span>
+                <div className="contact-phone-group">
+                  <a href="tel:+905352153000" className="contact-display-number">
+                    0535 215 30 00
+                  </a>
+                  <div className="contact-action-pills">
+                    <a href="tel:+905352153000" className="contact-pill contact-pill-call">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                      </svg>
+                      <span>Hemen Ara</span>
+                    </a>
+                    <a href="https://wa.me/905352153000" target="_blank" rel="noreferrer" className="contact-pill contact-pill-wa">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
+                        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                      </svg>
+                      <span>WhatsApp ↗</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Address Row */}
+              <div className="contact-editorial-row">
+                <span className="contact-label">Atölye Adresi</span>
+                <div className="contact-address-block">
+                  <p className="contact-address-text">
+                    Göcek, Turgut Özal Cd. No:7, 48310 Fethiye / Muğla
+                  </p>
+                  <a
+                    href="https://www.google.com/maps/dir//G%C3%B6cek,+Turgut+%C3%96zal+Cd.+No:7,+48310+Fethiye%2FMu%C4%9Fla"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="contact-underline-link"
+                  >
+                    Google Maps Yol Tarifi <span>↗</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Hours & Social Row */}
+              <div className="contact-editorial-row contact-split-row">
+                <div>
+                  <span className="contact-label">Çalışma Saatleri</span>
+                  <p className="contact-row-text">Pazartesi — Cumartesi: <strong>09:00 — 18:00</strong></p>
+                </div>
+                <div>
+                  <span className="contact-label">Sosyal Medya</span>
+                  <div style={{ marginTop: '4px' }}>
+                    <a href="https://www.instagram.com/gocekmarineflowers/" target="_blank" rel="noreferrer" className="contact-underline-link">
+                      Instagram @gocekmarineflowers <span>↗</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="contact-map-side">
+            <div className="contact-map-wrapper">
+              <iframe
+                title="Göcek Marine Flowers Harita Konumu"
+                src="https://maps.google.com/maps?q=G%C3%B6cek,+Turgut+%C3%96zal+Cd.+No:7,+48310+Fethiye/Mu%C4%9Fla&t=&z=16&ie=UTF-8&iwloc=&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+              <div className="contact-map-badge">
+                <span className="contact-map-pin">📍</span>
+                <div>
+                  <strong>Göcek Marine Flowers</strong>
+                  <small>Turgut Özal Cd. No:7, Göcek</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </RouteFrame>
+  )
+}

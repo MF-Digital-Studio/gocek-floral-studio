@@ -28,9 +28,19 @@ export const metadata: Metadata = {
   title: 'Göcek Marine Flowers — Göcek',
   description: 'Göcek\'te özel buketler, yat ve mekanlar için tasarlanmış seçkin çiçek tasarımları.',
   icons: {
-    icon: '/icon.svg',
-    apple: '/apple-icon.png',
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon-192.png', type: 'image/png', sizes: '192x192' },
+    ],
+    shortcut: '/favicon.ico',
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+    other: [
+      { rel: 'apple-touch-icon-precomposed', url: '/apple-touch-icon.png' },
+    ],
   },
+  manifest: '/site.webmanifest',
 }
 
 export const viewport: Viewport = {

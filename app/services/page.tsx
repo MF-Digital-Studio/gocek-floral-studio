@@ -78,11 +78,16 @@ export default function ServicesPage() {
       />
 
       <section className="section-shell route-services-detail">
-        <div className="services-detail-intro">
-          <h2 className="section-title">Ayrıcalıklı Çiçek Hizmetlerimiz</h2>
-          <p className="services-lead">
-            Göcek merkezdeki çiçek atölyemizde bireysel hediye siparişlerinden tekne, villa ve davet organizasyonlarına kadar her zevke özel profesyonel çiçek tasarımları hazırlıyoruz.
-          </p>
+        <div className="services-detail-intro-wrap">
+          <div className="services-detail-intro">
+            <h2 className="section-title">Ayrıcalıklı Çiçek Hizmetlerimiz</h2>
+            <p className="services-lead">
+              Göcek merkezdeki çiçek atölyemizde bireysel hediye siparişlerinden tekne, villa ve davet organizasyonlarına kadar her zevke özel profesyonel çiçek tasarımları hazırlıyoruz.
+            </p>
+          </div>
+          <div className="services-intro-brand">
+            <img src="/logo.png" alt="Göcek Marine Flowers Logo" className="services-intro-logo-img" />
+          </div>
         </div>
 
         <div className="service-detail-list">
