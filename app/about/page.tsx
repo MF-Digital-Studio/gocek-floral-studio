@@ -4,7 +4,9 @@ import { ArrowUpRight } from '@/components/icons'
 import { BUSINESS, SITE_URL } from '@/lib/seo-config'
 
 export const metadata: Metadata = {
-  title: `Hakkımızda – ${BUSINESS.name} | Göcek Çiçekçi`,
+  title: {
+    absolute: `Hakkımızda – Göcek Çiçek Atölyesi | ${BUSINESS.name}`,
+  },
   description:
     'Göcek Marine Flowers hakkında bilgi edinin. Göcek merkezdeki çiçek mağazamızda bireysel hediye siparişlerinden tekne ve villa düzenlemelerine kadar hizmet veriyoruz.',
   alternates: {
@@ -73,7 +75,7 @@ export default function AboutPage() {
         <div className="about-photos-grid">
           <div className="about-photo-card">
             <img
-              src="/hakkımızda_firma_sahibi.png"
+              src="/gocek-marine-flowers-firma-sahibi.png"
               alt="Göcek Marine Flowers çiçekçi – Göcek'teki mağazamızdan"
               className="about-photo-img"
               width={600}
@@ -83,7 +85,7 @@ export default function AboutPage() {
           </div>
           <div className="about-photo-card">
             <img
-              src="/mağaza.png"
+              src="/gocek-marine-flowers-magaza.png"
               alt="Göcek Marine Flowers çiçek mağazası – Turgut Özal Cd., Göcek"
               className="about-photo-img"
               width={600}

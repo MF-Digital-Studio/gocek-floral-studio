@@ -8,14 +8,16 @@ import { BUSINESS, SITE_URL } from '@/lib/seo-config'
 import { buildLocalBusinessSchema } from '@/lib/structured-data'
 
 export const metadata: Metadata = {
-  title: `Göcek Çiçekçi | ${BUSINESS.name} – Göcek Çiçek & Çiçek Siparişi`,
+  title: {
+    absolute: `Göcek Marine Flowers | Göcek Çiçek Tasarım Stüdyosu & Butik Çiçek`,
+  },
   description:
-    'Göcek\'te buket, gelin çiçeği, villa, yat ve düğün için taze çiçek tasarımları. Göcek Marine Flowers – Turgut Özal Cd. No:7, Göcek / Muğla.',
+    'Göcek\'te taze buket, gelin çiçeği, villa, yat ve düğün çiçek tasarımları. Göcek Marine Flowers – Turgut Özal Cd. No:7, Göcek / Muğla.',
   alternates: {
     canonical: SITE_URL,
   },
   openGraph: {
-    title: `Göcek Çiçekçi | ${BUSINESS.name}`,
+    title: `Göcek Marine Flowers | Göcek Çiçek Tasarım Stüdyosu`,
     description:
       'Göcek\'te özel günler, kutlamalar ve sevdikleriniz için özenle hazırlanan taze çiçek ve aranjmanlar.',
     url: SITE_URL,
@@ -24,7 +26,7 @@ export const metadata: Metadata = {
         url: '/about.png',
         width: 1200,
         height: 630,
-        alt: `${BUSINESS.name} – Göcek'in Çiçekçisi`,
+        alt: `${BUSINESS.name} – Göcek Çiçek Tasarım Stüdyosu`,
       },
     ],
   },
@@ -73,6 +75,7 @@ export default function Page() {
           muted
           playsInline
           preload="metadata"
+          poster="/about.png"
         >
           <source src="/banner.mp4" type="video/mp4" />
         </video>
@@ -193,6 +196,7 @@ export default function Page() {
           muted
           playsInline
           preload="none"
+          poster="/gocek-marine-flowers-magaza.png"
         >
           <source src="/dar_section_video.mp4" type="video/mp4" />
         </video>
@@ -212,7 +216,7 @@ export default function Page() {
             title="Google Maps'te Yol Tarifi Al – Göcek Marine Flowers"
           >
             <img
-              src="/mağaza.png"
+              src="/gocek-marine-flowers-magaza.png"
               alt="Göcek Marine Flowers çiçek mağazası – Turgut Özal Cd., Göcek"
               width={800}
               height={600}

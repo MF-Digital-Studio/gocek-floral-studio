@@ -1,10 +1,13 @@
 import type { Metadata } from 'next'
 import { OrderCta, RouteFrame, PageHero, imageSet } from '@/components/site-shell'
+import { ArrowUpRight } from '@/components/icons'
 import { BUSINESS, SITE_URL } from '@/lib/seo-config'
 import { buildBreadcrumbSchema } from '@/lib/structured-data'
 
 export const metadata: Metadata = {
-  title: `Çiçek Hizmetleri – ${BUSINESS.name} | Göcek Çiçekçi`,
+  title: {
+    absolute: `Çiçek Hizmetleri – Gelin, Villa, Yat & Düğün | ${BUSINESS.name}`,
+  },
   description:
     'Göcek\'te buket, gelin el çiçeği, ev & villa aranjmanı, yat & tekne çiçek servisi, düğün tasarımı, araç süsleme ve balon hizmetleri. Göcek Marine Flowers.',
   alternates: {
@@ -51,7 +54,7 @@ const detailedServices: ServiceDetail[] = [
     lead: 'En özel gününüzün zarafetini tamamlayan kişiye özel tasarlanmış gelin buketleri.',
     description:
       'Gelinliğinizin kesimi, düğün temanız ve mevsime uygun taze çiçeklerle hazırlanan kusursuz gelin buketleri. Damat yaka çiçeği, nedime bileklikleri ve saç aksesuarları ile bütüncül bir estetik sunuyoruz. Akdeniz sahil ikliminde gün boyu formunu ve canlılığını koruyan özel dayanıklı çiçekler tercih edilir.',
-    image: '/gelin_çiçeği.jpg',
+    image: '/gocek-gelin-el-cicegi.jpg',
     alt: 'Göcek düğünü için hazırlanmış taze gelin el çiçeği',
   },
   {
@@ -60,7 +63,7 @@ const detailedServices: ServiceDetail[] = [
     lead: 'Yaşam alanlarınıza ferahlık ve doğal lüks katan botanik masa ve vazo düzenlemeleri.',
     description:
       'Göcek ve çevresindeki villalar ile yaşam alanları için ferahlık katan mimari çiçek düzenlemeleri. Salon konsol aranjmanları, yemek masası çiçekleri, teras düzenlemeleri ve özel saksılı orkideler ile mekanınıza doğal bir lüks dokunuş kazandırıyoruz. İsteğe bağlı olarak haftalık veya periyodik taze çiçek değişim servisi sağlanmaktadır.',
-    image: '/ev_çiçeği.jpg',
+    image: '/gocek-ev-villa-cicegi.jpg',
     alt: 'Göcek villası için ev çiçeği ve orkide aranjmanı',
   },
   {
@@ -69,7 +72,7 @@ const detailedServices: ServiceDetail[] = [
     lead: 'Göcek marinalarına ve teknenize doğrudan teslim edilen marin konseptli çiçekler.',
     description:
       'D-Marin Göcek, Skopea Marina, Club Marina ve Göcek koylarındaki tüm özel tekne ve motoryatlar için doğrudan marina ve güverteye teslim çiçek servisi. Deniz koşullarına, rüzgara ve tuzlu hava nemine dayanıklı, devrilmeyen özel tabanlı vazolarda hazırlanan kokteyl, salon ve flybridge çiçek aranjmanları.',
-    image: '/yat_süsleme.jpg',
+    image: '/gocek-yat-marina-cicek.jpg',
     alt: 'Göcek marinasındaki yat için çiçek aranjmanı',
   },
   {
@@ -78,7 +81,7 @@ const detailedServices: ServiceDetail[] = [
     lead: 'Kutlamalar, partiler ve özel günler için mekana özel konsept çiçek dekorasyonu.',
     description:
       'Kumsal düğünleri, tekne partileri, gala yemekleri ve butik davetler için mekana özel konsept çiçek dekorasyonu. Giriş kemerleri (arch), nikah seremonisi arka planları, şamdan ve masa çiçekleri ile unutulmaz bir atmosfer yaratıyoruz. Mekanın mimari dokusuna ve davet temanıza uygun uçtan uca anahtar teslim çiçek enstalasyonu.',
-    image: '/düğün_süsleme.jpg',
+    image: '/gocek-dugun-cicek-susleme.jpg',
     alt: 'Göcek düğün organizasyonu için çiçek dekorasyonu',
   },
   {
@@ -87,7 +90,7 @@ const detailedServices: ServiceDetail[] = [
     lead: 'Düğün ve özel günleriniz için aracınıza özel taze çiçek ve zarif tül süslemeleri.',
     description:
       'Klasik, üstü açık ya da modern araçlarınıza uygun şık ve estetik araç süsleme hizmeti. Aracın boyasına zarar vermeyen özel vantuz ve sabitleme aparatları kullanılarak, sürüş esnasında formunu koruyan taze gül, okaliptüs ve saten tül detaylarıyla hazırlanır.',
-    image: '/araba_süsleme.jpg',
+    image: '/gocek-gelin-araba-susleme.jpg',
     alt: 'Göcek düğünü için gelin arabası çiçek süslemesi',
   },
   {
@@ -96,7 +99,7 @@ const detailedServices: ServiceDetail[] = [
     lead: 'Kutlama, doğum günü ve özel sürprizler için kaliteli helyum gazlı balon tasarımları.',
     description:
       'Doğum günleri, evlilik teklifleri, cinsiyet partileri, baby shower ve özel kutlamalar için yüksek kaliteli helyum gazlı balon tasarımları. Çiçek detaylı balon kemerleri, pastel ve krom renk seçenekleri, kişiye özel harf ve rakam balon buketleri ile mekanlara neşeli ve büyüleyici bir görsellik katıyoruz.',
-    image: '/balon_süsleme.jpg',
+    image: '/gocek-helyum-balon-susleme.jpg',
     alt: 'Özel kutlama için helyum gazlı balon aranjmanı – Göcek',
   },
 ]
@@ -131,6 +134,14 @@ export default function ServicesPage() {
               siparişlerinden tekne, villa ve davet organizasyonlarına kadar
               her zevke özel profesyonel çiçek tasarımları hazırlıyoruz.
             </p>
+            <div style={{ marginTop: '16px', display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
+              <a className="text-link" href="/works">
+                Tüm Çiçek Koleksiyonunu İnceleyin <ArrowUpRight size={13} />
+              </a>
+              <a className="text-link" href="/gocek-cicekci">
+                Göcek&apos;te Çiçek Siparişi <ArrowUpRight size={13} />
+              </a>
+            </div>
           </div>
           <div className="services-intro-brand">
             <img

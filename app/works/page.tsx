@@ -5,7 +5,9 @@ import { BUSINESS, SITE_URL } from '@/lib/seo-config'
 import { buildBreadcrumbSchema } from '@/lib/structured-data'
 
 export const metadata: Metadata = {
-  title: `Çiçek Koleksiyonu – ${BUSINESS.name} | Göcek Çiçekçi`,
+  title: {
+    absolute: `Çiçek Koleksiyonu & Tasarımlar | ${BUSINESS.name}`,
+  },
   description:
     'Göcek Marine Flowers çiçek koleksiyonu. Gül buketleri, orkide aranjmanları, şakayık, ortanca ve egzotik çiçek tasarımları. Göcek, Muğla.',
   alternates: {
@@ -65,7 +67,10 @@ export default function WorksPage() {
 
       <section className="section-shell route-works">
         <div className="route-intro">
-          <p className="eyebrow">Seçili Projeler</p>
+          <div>
+            <p className="eyebrow">Seçili Projeler</p>
+            <h2 className="section-title">Özel Çiçek Koleksiyonumuz</h2>
+          </div>
           <p>
             Ortamın karakterine göre şekillenen aranjmanlar, özel davetler ve
             botanik mekan tasarımları.
@@ -93,7 +98,10 @@ export default function WorksPage() {
             </a>
           ))}
         </div>
-        <div style={{ textAlign: 'center', marginTop: '48px' }}>
+        <div style={{ textAlign: 'center', marginTop: '48px', display: 'flex', justifyContent: 'center', gap: '24px', flexWrap: 'wrap' }}>
+          <a className="text-link" href="/services">
+            Hizmet Detaylarını İnceleyin <ArrowUpRight size={13} />
+          </a>
           <a className="text-link" href="/gocek-cicekci">
             Göcek&apos;teki çiçek seçeneklerimizi keşfedin <ArrowUpRight size={13} />
           </a>

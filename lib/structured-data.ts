@@ -29,6 +29,12 @@ export function buildLocalBusinessSchema() {
       postalCode: BUSINESS.postalCode,
       addressCountry: BUSINESS.country,
     },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: BUSINESS.geo.latitude,
+      longitude: BUSINESS.geo.longitude,
+    },
+    hasMap: BUSINESS.mapsUrl,
     openingHoursSpecification: BUSINESS.openingHours.map((h) => ({
       '@type': 'OpeningHoursSpecification',
       dayOfWeek: h.dayOfWeek,
@@ -37,8 +43,7 @@ export function buildLocalBusinessSchema() {
     })),
     sameAs: [BUSINESS.instagram],
     description: BUSINESS.description,
-    servesCuisine: undefined, // Florist için geçerli değil
-    priceRange: undefined, // TODO: Fiyat aralığı bilinmiyor
+    priceRange: BUSINESS.priceRange,
   }
 }
 

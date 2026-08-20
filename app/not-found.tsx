@@ -4,7 +4,9 @@ import { ArrowUpRight } from '@/components/icons'
 import { BUSINESS } from '@/lib/seo-config'
 
 export const metadata: Metadata = {
-  title: `Sayfa Bulunamadı (404) | ${BUSINESS.name}`,
+  title: {
+    absolute: `Sayfa Bulunamadı (404) | ${BUSINESS.name}`,
+  },
   description: 'Aradığınız sayfa bulunamadı. Ana sayfaya dönebilir veya çiçeklerimizi keşfedebilirsiniz.',
   robots: {
     index: false,

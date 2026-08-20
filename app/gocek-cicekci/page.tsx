@@ -9,14 +9,16 @@ import {
 } from '@/lib/structured-data'
 
 export const metadata: Metadata = {
-  title: `Göcek Çiçekçi | ${BUSINESS.name}`,
+  title: {
+    absolute: `Göcek Çiçekçi | Göcek Çiçek Siparişi & Teslimat – ${BUSINESS.name}`,
+  },
   description:
     'Göcek\'te taze çiçekler, buketler ve özel tasarım aranjmanlar. Göcek Marine Flowers ile Göcek\'teki çiçek seçeneklerini keşfedin. Turgut Özal Cd. No:7 – 0535 215 30 00.',
   alternates: {
     canonical: `${SITE_URL}/gocek-cicekci`,
   },
   openGraph: {
-    title: `Göcek Çiçekçi | ${BUSINESS.name}`,
+    title: `Göcek Çiçekçi | Göcek Çiçek Siparişi – ${BUSINESS.name}`,
     description:
       'Göcek\'te taze buket, gelin çiçeği, villa & yat aranjmanı, düğün organizasyonu. Göcek Marine Flowers – 0535 215 30 00.',
     url: `${SITE_URL}/gocek-cicekci`,
@@ -44,7 +46,7 @@ const highlights = [
     number: '02',
     title: 'Gelin Çiçekleri',
     desc: 'Düğün temanıza ve gelinliğinize özel taze gelin el çiçeği tasarımları.',
-    image: '/gelin_çiçeği.jpg',
+    image: '/gocek-gelin-el-cicegi.jpg',
     alt: 'Göcek düğünü için gelin el çiçeği',
     href: '/services',
   },
@@ -52,7 +54,7 @@ const highlights = [
     number: '03',
     title: 'Yat & Marina',
     desc: 'Göcek marinalarına doğrudan teslim edilen deniz konseptli çiçek aranjmanları.',
-    image: '/yat_süsleme.jpg',
+    image: '/gocek-yat-marina-cicek.jpg',
     alt: 'Göcek marinasındaki yata çiçek aranjmanı teslimatı',
     href: '/services',
   },
@@ -60,7 +62,7 @@ const highlights = [
     number: '04',
     title: 'Ev & Villa',
     desc: 'Göcek ve çevresindeki villalar için taze masa çiçekleri ve botanik düzenlemeler.',
-    image: '/ev_çiçeği.jpg',
+    image: '/gocek-ev-villa-cicegi.jpg',
     alt: 'Göcek villası için ev çiçeği ve orkide aranjmanı',
     href: '/services',
   },
@@ -68,7 +70,7 @@ const highlights = [
     number: '05',
     title: 'Düğün & Davet',
     desc: 'Kumsal düğünleri ve tekne partileri dahil tüm organizasyonlar için konsept dekorasyon.',
-    image: '/düğün_süsleme.jpg',
+    image: '/gocek-dugun-cicek-susleme.jpg',
     alt: 'Göcek\'te düğün organizasyonu çiçek dekorasyonu',
     href: '/services',
   },
@@ -226,7 +228,7 @@ export default function GocekCicekciPage() {
             title="Göcek Marine Flowers – Google Maps Yol Tarifi"
           >
             <img
-              src="/mağaza.png"
+              src="/gocek-marine-flowers-magaza.png"
               alt="Göcek Marine Flowers çiçek mağazası – Turgut Özal Cd. No:7, Göcek"
               width={800}
               height={600}

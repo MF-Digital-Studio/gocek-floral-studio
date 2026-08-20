@@ -20,37 +20,37 @@ export const servicesData: ServiceItem[] = [
     number: '02',
     title: 'Gelin El Çiçeği',
     desc: 'En özel gününüz için tarzınıza ve konseptinize uygun özenle tasarlanan taze gelin buketleri ve yaka çiçekleri.',
-    image: '/gelin_çiçeği.jpg',
+    image: '/gocek-gelin-el-cicegi.jpg',
   },
   {
     number: '03',
     title: 'Ev & Villa Çiçekleri',
     desc: 'Yaşam alanlarınıza canlılık katan vazo aranjmanları, orkide ve taze masa düzenlemeleri.',
-    image: '/ev_çiçeği.jpg',
+    image: '/gocek-ev-villa-cicegi.jpg',
   },
   {
     number: '04',
     title: 'Yat & Tekne Çiçekleri',
     desc: 'Deniz konseptine uygun, uzun süre formunu ve tazeliğini koruyan özel tekne ve yat aranjmanları.',
-    image: '/yat_süsleme.jpg',
+    image: '/gocek-yat-marina-cicek.jpg',
   },
   {
     number: '05',
     title: 'Düğün & Davet Tasarımı',
     desc: 'Kutlamalar, partiler ve özel günler için kişiye ve mekana özel konsept çiçek dekorasyonu.',
-    image: '/düğün_süsleme.jpg',
+    image: '/gocek-dugun-cicek-susleme.jpg',
   },
   {
     number: '06',
     title: 'Gelin Arabası Süsleme',
     desc: 'Düğün ve özel günleriniz için şık, estetik ve mevsime uygun taze çiçeklerle araç süsleme hizmeti.',
-    image: '/araba_süsleme.jpg',
+    image: '/gocek-gelin-araba-susleme.jpg',
   },
   {
     number: '07',
     title: 'Helyum Gazlı Balon',
     desc: 'Kutlama, doğum günü ve özel sürprizler için renkli ve kaliteli helyum gazlı balon tasarımları.',
-    image: '/balon_süsleme.jpg',
+    image: '/gocek-helyum-balon-susleme.jpg',
   },
 ]
 

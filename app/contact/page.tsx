@@ -5,7 +5,9 @@ import { BUSINESS, SITE_URL } from '@/lib/seo-config'
 import { buildBreadcrumbSchema } from '@/lib/structured-data'
 
 export const metadata: Metadata = {
-  title: `İletişim & Konum – ${BUSINESS.name} | Göcek Çiçekçi`,
+  title: {
+    absolute: `İletişim & Konum – Turgut Özal Cd. No:7 | ${BUSINESS.name}`,
+  },
   description:
     'Göcek Marine Flowers iletişim ve konum bilgileri. Turgut Özal Cd. No:7, Göcek / Muğla. Tel: 0535 215 30 00. Pazartesi–Cumartesi 09:00–18:00.',
   alternates: {
@@ -18,7 +20,7 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/contact`,
     images: [
       {
-        url: '/mağaza.png',
+        url: '/gocek-marine-flowers-magaza.png',
         width: 1200,
         height: 630,
         alt: 'Göcek Marine Flowers çiçek mağazası – Turgut Özal Cd., Göcek',

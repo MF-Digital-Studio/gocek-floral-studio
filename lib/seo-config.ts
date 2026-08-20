@@ -3,7 +3,7 @@
  * Tüm sayfalarda tutarlı NAP (Name, Address, Phone) ve metadata için tek kaynak.
  *
  * Domain: www.göcekmarineflowers.com
- * Punycode (teknik SEO için): www.xn--gcekmarineflowers-dfb.com
+ * Punycode (teknik SEO için): www.xn--gcekmarineflowers-zzb.com
  *
  * Canonical, sitemap ve schema URL'lerinde punycode kullanıyoruz çünkü
  * Google Search Console, Bing ve diğer araçlar punycode formunu daha güvenilir işler.
@@ -25,6 +25,15 @@ export const BUSINESS = {
   district: 'Fethiye',
   region: 'Muğla',
   country: 'TR',
+
+  // Geo Koordinatları (Göcek Merkez / Turgut Özal Cd.)
+  geo: {
+    latitude: 36.7533,
+    longitude: 28.9431,
+  },
+
+  // Fiyat Aralığı
+  priceRange: '₺₺',
 
   // İletişim
   phone: '+905352153000',

@@ -185,7 +185,7 @@ export function RouteFrame({ children }: { children: React.ReactNode }) {
 }
 
 export const imageSet = {
-  studio: '/mağaza.png',
+  studio: '/gocek-marine-flowers-magaza.png',
   garden: '/flower-8.png',
   ceremony: '/flower-1.png',
   white: '/flower-5.png',
