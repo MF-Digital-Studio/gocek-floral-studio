@@ -1,6 +1,8 @@
 {
-  "name": "Göcek Marine Flowers — Göcek",
+  "name": "Göcek Marine Flowers",
   "short_name": "Marine Flowers",
+  "start_url": "/",
+  "scope": "/",
   "icons": [
     {
       "src": "/icon-192.png",
@@ -15,5 +17,6 @@
   ],
   "theme_color": "#edd4cc",
   "background_color": "#fcfaf7",
-  "display": "standalone"
+  "display": "standalone",
+  "lang": "tr"
 }

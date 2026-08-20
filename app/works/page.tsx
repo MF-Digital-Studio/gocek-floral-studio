@@ -1,44 +1,101 @@
+import type { Metadata } from 'next'
 import { RouteFrame, PageHero, imageSet } from '@/components/site-shell'
+import { BUSINESS, SITE_URL } from '@/lib/seo-config'
+import { buildBreadcrumbSchema } from '@/lib/structured-data'
 
-const works = [
-  ['Gül & Bahçe Buketi', 'Renkli Kır Buketi · Göcek', '/flower-1.png'],
-  ['Lilyum & Gerbera Aranjmanı', 'Masa & Mekan Çiçeği · Göcek', '/flower-2.png'],
-  ['Pembe Ortanca Buketi', 'Taze Ortanca · Göcek', '/flower-3.png'],
-  ['Kırmızı Gül Buketi', 'Özel Sipariş · Göcek', '/flower-4.png'],
-  ['Orkide & Gerbera Vazo Tasarımı', 'Vazo Aranjmanı · Göcek', '/flower-5.png'],
-  ['Şakayık Sepet Aranjmanı', 'Özel Gün Tasarımı · Göcek', '/flower-6.png'],
-  ['Özel Saksı Orkide Aranjmanı', 'Botanik Mekan Tasarımı · Göcek', '/flower-7.png'],
-  ['Taze Şakayık Buketi', 'Mevsim Çiçekleri · Göcek', '/flower-8.png'],
-  ['Antoryum & Gül Buketi', 'Egzotik Buket · Göcek', '/flower-9.png'],
-  ['Beyaz Gül & Antoryum Buketi', 'Özel Tasarım · Göcek', '/flower-10.png'],
-  ['Mor Orkide & Sukulent Buketi', 'Özel Tasarım · Göcek', '/flower-11.png'],
-  ['Beyaz Şakayık & Bambu Aranjmanı', 'Masa & Vazo Tasarımı · Göcek', '/flower-12.png'],
+export const metadata: Metadata = {
+  title: `Çiçek Koleksiyonu – ${BUSINESS.name} | Göcek Çiçekçi`,
+  description:
+    'Göcek Marine Flowers çiçek koleksiyonu. Gül buketleri, orkide aranjmanları, şakayık, ortanca ve egzotik çiçek tasarımları. Göcek, Muğla.',
+  alternates: {
+    canonical: `${SITE_URL}/works`,
+  },
+  openGraph: {
+    title: `Çiçek Koleksiyonu | ${BUSINESS.name}`,
+    description:
+      'Göcek\'te hazırlanan gül, orkide, şakayık ve egzotik çiçek tasarımları koleksiyonu.',
+    url: `${SITE_URL}/works`,
+    images: [
+      {
+        url: '/flower-1.png',
+        width: 1200,
+        height: 630,
+        alt: 'Göcek Marine Flowers çiçek koleksiyonu',
+      },
+    ],
+  },
+}
+
+const works: Array<{ title: string; meta: string; image: string; alt: string }> = [
+  { title: 'Gül & Bahçe Buketi', meta: 'Renkli Kır Buketi · Göcek', image: '/flower-1.png', alt: 'Göcek\'te hazırlanan renkli gül ve kır çiçeği buketi' },
+  { title: 'Lilyum & Gerbera Aranjmanı', meta: 'Masa & Mekan Çiçeği · Göcek', image: '/flower-2.png', alt: 'Göcek için lilyum ve gerbera masa aranjmanı' },
+  { title: 'Pembe Ortanca Buketi', meta: 'Taze Ortanca · Göcek', image: '/flower-3.png', alt: 'Taze pembe ortanca buketi – Göcek çiçekçi' },
+  { title: 'Kırmızı Gül Buketi', meta: 'Özel Sipariş · Göcek', image: '/flower-4.png', alt: 'Kırmızı gül buketi özel sipariş – Göcek' },
+  { title: 'Orkide & Gerbera Vazo Tasarımı', meta: 'Vazo Aranjmanı · Göcek', image: '/flower-5.png', alt: 'Orkide ve gerbera vazo aranjmanı – Göcek Marine Flowers' },
+  { title: 'Şakayık Sepet Aranjmanı', meta: 'Özel Gün Tasarımı · Göcek', image: '/flower-6.png', alt: 'Şakayık sepet aranjmanı – özel gün çiçeği Göcek' },
+  { title: 'Özel Saksı Orkide Aranjmanı', meta: 'Botanik Mekan Tasarımı · Göcek', image: '/flower-7.png', alt: 'Villa ve mekan için saksı orkide aranjmanı – Göcek' },
+  { title: 'Taze Şakayık Buketi', meta: 'Mevsim Çiçekleri · Göcek', image: '/flower-8.png', alt: 'Mevsim taze şakayık buketi – Göcek çiçekçi' },
+  { title: 'Antoryum & Gül Buketi', meta: 'Egzotik Buket · Göcek', image: '/flower-9.png', alt: 'Antoryum ve gül egzotik buketi – Göcek Marine Flowers' },
+  { title: 'Beyaz Gül & Antoryum Buketi', meta: 'Özel Tasarım · Göcek', image: '/flower-10.png', alt: 'Beyaz gül ve antoryum özel tasarım buketi – Göcek' },
+  { title: 'Mor Orkide & Sukulent Buketi', meta: 'Özel Tasarım · Göcek', image: '/flower-11.png', alt: 'Mor orkide ve sukulent buketi – özel tasarım' },
+  { title: 'Beyaz Şakayık & Bambu Aranjmanı', meta: 'Masa & Vazo Tasarımı · Göcek', image: '/flower-12.png', alt: 'Beyaz şakayık ve bambu vazo masa aranjmanı – Göcek' },
 ]
 
 export default function WorksPage() {
+  const breadcrumbSchema = buildBreadcrumbSchema([
+    { name: 'Ana Sayfa', url: SITE_URL },
+    { name: 'Koleksiyon', url: `${SITE_URL}/works` },
+  ])
+
   return (
     <RouteFrame>
-      <PageHero eyebrow="Seçili Çalışmalar · Göcek" title={<>Koleksiyon</>} image={imageSet.ceremony} alt="Çiçekli tören enstalasyonu" />
+      <script
+        id="schema-breadcrumb-works"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
+      <PageHero
+        eyebrow="Seçili Çalışmalar · Göcek"
+        title={<>Koleksiyon</>}
+        image={imageSet.ceremony}
+        alt="Göcek'te özenle hazırlanmış çiçek aranjmanları"
+      />
+
       <section className="section-shell route-works">
         <div className="route-intro">
           <p className="eyebrow">Seçili Projeler</p>
-          <p>Ortamın karakterine göre şekillenen aranjmanlar, özel davetler ve botanik mekan tasarımları.</p>
+          <p>
+            Ortamın karakterine göre şekillenen aranjmanlar, özel davetler ve
+            botanik mekan tasarımları.
+          </p>
         </div>
         <div className="works-grid">
-          {works.map(([title, meta, image]) => (
-            <a className="work-item" href="/contact" key={title}>
+          {works.map((work) => (
+            <a className="work-item" href="/contact" key={work.title}>
               <div className="work-image image-frame">
-                <img src={image} alt={title} />
+                <img
+                  src={work.image}
+                  alt={work.alt}
+                  width={400}
+                  height={500}
+                  loading="lazy"
+                />
               </div>
               <div className="work-caption">
                 <div>
-                  <h3>{title}</h3>
-                  <p>{meta}</p>
+                  <h3>{work.title}</h3>
+                  <p>{work.meta}</p>
                 </div>
                 <span>↗</span>
               </div>
             </a>
           ))}
+        </div>
+        <div style={{ textAlign: 'center', marginTop: '48px' }}>
+          <a className="text-link" href="/gocek-cicekci">
+            Göcek&apos;teki çiçek seçeneklerimizi keşfedin <span>↗</span>
+          </a>
         </div>
       </section>
     </RouteFrame>

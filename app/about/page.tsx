@@ -1,4 +1,29 @@
+import type { Metadata } from 'next'
 import { PageHero, RouteFrame, imageSet } from '@/components/site-shell'
+import { BUSINESS, SITE_URL } from '@/lib/seo-config'
+
+export const metadata: Metadata = {
+  title: `Hakkımızda – ${BUSINESS.name} | Göcek Çiçekçi`,
+  description:
+    'Göcek Marine Flowers hakkında bilgi edinin. Göcek merkezdeki çiçek mağazamızda bireysel hediye siparişlerinden tekne ve villa düzenlemelerine kadar hizmet veriyoruz.',
+  alternates: {
+    canonical: `${SITE_URL}/about`,
+  },
+  openGraph: {
+    title: `Hakkımızda | ${BUSINESS.name}`,
+    description:
+      'Göcek\'te taze çiçek mağazası. Buket, gelin çiçeği, villa, yat ve düğün organizasyonu için özenli hizmet.',
+    url: `${SITE_URL}/about`,
+    images: [
+      {
+        url: '/about.png',
+        width: 1200,
+        height: 630,
+        alt: `${BUSINESS.name} – Göcek Çiçek Mağazası`,
+      },
+    ],
+  },
+}
 
 export default function AboutPage() {
   return (
@@ -7,7 +32,7 @@ export default function AboutPage() {
         eyebrow="Göcek Marine Flowers · Göcek"
         title={<>Hakkımızda</>}
         image={imageSet.garden}
-        alt="Göcek Marine Flowers"
+        alt="Göcek Marine Flowers çiçek mağazası bahçesi"
       />
 
       {/* Main Intro Narrative Section */}
@@ -16,19 +41,28 @@ export default function AboutPage() {
           <div>
             <span className="section-kicker">Mağazamız Hakkında</span>
             <h2 className="section-title">
-              Göcek’te Taze ve Özenli Çiçek Tasarımları
+              Göcek&apos;te Taze ve Özenli Çiçek Tasarımları
             </h2>
           </div>
           <div className="route-copy">
             <p className="lead">
-              Göcek merkezdeki çiçek mağazamızda sevdikleriniz, eviniz, villanız veya tekneniz için her gün taze çiçek tasarımları hazırlıyoruz.
+              Göcek merkezdeki çiçek mağazamızda sevdikleriniz, eviniz,
+              villanız veya tekneniz için her gün taze çiçek tasarımları
+              hazırlıyoruz.
             </p>
             <p>
-              Göcek Marine Flowers olarak, bireysel hediye siparişlerinden tekne ve villa masa düzenlemelerine, özel gün ve etkinlik süslemelerine kadar geniş bir yelpazede hizmet veriyoruz.
+              Göcek Marine Flowers olarak, bireysel hediye siparişlerinden
+              tekne ve villa masa düzenlemelerine, özel gün ve etkinlik
+              süslemelerine kadar geniş bir yelpazede hizmet veriyoruz.
             </p>
             <p>
-              İster özel bir gün için taze bir buket, ister davetleriniz için masa dekorasyonu olsun; mevsime uygun en kaliteli taze çiçeklerle isteğinize ve zevkinize göre özenle hazırlıyoruz.
+              İster özel bir gün için taze bir buket, ister davetleriniz için
+              masa dekorasyonu olsun; mevsime uygun en kaliteli taze
+              çiçeklerle isteğinize ve zevkinize göre özenle hazırlıyoruz.
             </p>
+            <a className="text-link" href="/gocek-cicekci" style={{ marginTop: '8px', display: 'inline-block' }}>
+              Göcek&apos;teki çiçek seçeneklerimizi keşfedin <span>↗</span>
+            </a>
           </div>
         </div>
       </section>
@@ -39,15 +73,21 @@ export default function AboutPage() {
           <div className="about-photo-card">
             <img
               src="/hakkımızda_firma_sahibi.png"
-              alt="Göcek Marine Flowers"
+              alt="Göcek Marine Flowers çiçekçi – Göcek'teki mağazamızdan"
               className="about-photo-img"
+              width={600}
+              height={750}
+              loading="lazy"
             />
           </div>
           <div className="about-photo-card">
             <img
               src="/mağaza.png"
-              alt="Göcek Marine Flowers Çiçek Mağazası"
+              alt="Göcek Marine Flowers çiçek mağazası – Turgut Özal Cd., Göcek"
               className="about-photo-img"
+              width={600}
+              height={750}
+              loading="lazy"
             />
           </div>
         </div>
@@ -59,14 +99,15 @@ export default function AboutPage() {
           <span className="section-kicker" style={{ color: 'rgba(28, 40, 51, 0.7)' }}>Göcek Marine Flowers</span>
           <h2 className="services-cta-title">Çiçek Siparişiniz İçin Bize Ulaşın</h2>
           <p className="services-cta-copy">
-            Bireysel hediye buketleriniz, villa ve tekne siparişleriniz için WhatsApp'tan yazabilir veya atölyemize uğrayabilirsiniz.
+            Bireysel hediye buketleriniz, villa ve tekne siparişleriniz için
+            WhatsApp&apos;tan yazabilir veya atölyemize uğrayabilirsiniz.
           </p>
           <div className="services-cta-buttons">
-            <a href="https://wa.me/905352153000" target="_blank" rel="noreferrer" className="services-cta-btn services-cta-wa">
-              WhatsApp'tan Yazın ↗
+            <a href={BUSINESS.whatsapp} target="_blank" rel="noreferrer" className="services-cta-btn services-cta-wa">
+              WhatsApp&apos;tan Yazın ↗
             </a>
             <a href="/contact" className="services-cta-btn services-cta-call">
-              İletişim & Konum ↗
+              İletişim &amp; Konum ↗
             </a>
           </div>
         </div>

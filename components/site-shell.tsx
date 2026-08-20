@@ -117,14 +117,18 @@ export function useScrollReveal() {
           }
         })
       },
-      { threshold: 0.1, rootMargin: '0px 0px -30px 0px' }
+      { threshold: 0.02, rootMargin: '0px 0px 120px 0px' }
     )
 
-    const selectors = 'section, .section-shell, .studio, .gallery, .contact, .about-photo-card, .service-detail-item, .works-card, .services-cta-section'
+    const selectors = '.section-shell, .studio, .gallery, .contact, .about-photo-card, .service-detail-item, .works-card, .services-cta-section'
     const elements = document.querySelectorAll(selectors)
 
     elements.forEach((el) => {
-      if (!el.classList.contains('is-visible')) {
+      const rect = el.getBoundingClientRect()
+      // If already in or near viewport on page load, make visible immediately
+      if (rect.top < window.innerHeight + 120) {
+        el.classList.add('is-visible')
+      } else {
         el.classList.add('reveal-on-scroll')
         observer.observe(el)
       }

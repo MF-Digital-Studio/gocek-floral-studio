@@ -1,4 +1,30 @@
+import type { Metadata } from 'next'
 import { RouteFrame, PageHero, imageSet } from '@/components/site-shell'
+import { BUSINESS, SITE_URL } from '@/lib/seo-config'
+import { buildBreadcrumbSchema } from '@/lib/structured-data'
+
+export const metadata: Metadata = {
+  title: `Çiçek Hizmetleri – ${BUSINESS.name} | Göcek Çiçekçi`,
+  description:
+    'Göcek\'te buket, gelin el çiçeği, ev & villa aranjmanı, yat & tekne çiçek servisi, düğün tasarımı, araç süsleme ve balon hizmetleri. Göcek Marine Flowers.',
+  alternates: {
+    canonical: `${SITE_URL}/services`,
+  },
+  openGraph: {
+    title: `Çiçek Hizmetleri | ${BUSINESS.name}`,
+    description:
+      'Göcek\'te 7 farklı çiçek hizmeti: buket, gelin, villa, yat, düğün, araç süsleme ve balon tasarımları.',
+    url: `${SITE_URL}/services`,
+    images: [
+      {
+        url: '/flower-5.png',
+        width: 1200,
+        height: 630,
+        alt: 'Göcek Marine Flowers çiçek hizmetleri',
+      },
+    ],
+  },
+}
 
 interface ServiceDetail {
   number: string
@@ -6,6 +32,7 @@ interface ServiceDetail {
   lead: string
   description: string
   image: string
+  alt: string
 }
 
 const detailedServices: ServiceDetail[] = [
@@ -16,6 +43,7 @@ const detailedServices: ServiceDetail[] = [
     description:
       'Doğum günleri, yıldönümleri, evlilik teklifleri ve sevdiklerinize özel anlar için Göcek merkezdeki atölyemizde günlük hazırlanan seçkin buketler. İthal güller, şakayıklar, ortancalar ve egzotik botanik yapraklar ile kişiye özel renk paletlerinde tasarlanır. Göcek içi ve çevresine aynı gün güvenilir teslimat seçeneği sunulmaktadır.',
     image: '/flower-1.png',
+    alt: 'Göcek\'te hazırlanan özel gül ve kır çiçeği buketi',
   },
   {
     number: '02',
@@ -24,6 +52,7 @@ const detailedServices: ServiceDetail[] = [
     description:
       'Gelinliğinizin kesimi, düğün temanız ve mevsime uygun taze çiçeklerle hazırlanan kusursuz gelin buketleri. Damat yaka çiçeği, nedime bileklikleri ve saç aksesuarları ile bütüncül bir estetik sunuyoruz. Akdeniz sahil ikliminde gün boyu formunu ve canlılığını koruyan özel dayanıklı çiçekler tercih edilir.',
     image: '/gelin_çiçeği.jpg',
+    alt: 'Göcek düğünü için hazırlanmış taze gelin el çiçeği',
   },
   {
     number: '03',
@@ -32,6 +61,7 @@ const detailedServices: ServiceDetail[] = [
     description:
       'Göcek ve çevresindeki villalar ile yaşam alanları için ferahlık katan mimari çiçek düzenlemeleri. Salon konsol aranjmanları, yemek masası çiçekleri, teras düzenlemeleri ve özel saksılı orkideler ile mekanınıza doğal bir lüks dokunuş kazandırıyoruz. İsteğe bağlı olarak haftalık veya periyodik taze çiçek değişim servisi sağlanmaktadır.',
     image: '/ev_çiçeği.jpg',
+    alt: 'Göcek villası için ev çiçeği ve orkide aranjmanı',
   },
   {
     number: '04',
@@ -40,6 +70,7 @@ const detailedServices: ServiceDetail[] = [
     description:
       'D-Marin Göcek, Skopea Marina, Club Marina ve Göcek koylarındaki tüm özel tekne ve motoryatlar için doğrudan marina ve güverteye teslim çiçek servisi. Deniz koşullarına, rüzgara ve tuzlu hava nemine dayanıklı, devrilmeyen özel tabanlı vazolarda hazırlanan kokteyl, salon ve flybridge çiçek aranjmanları.',
     image: '/yat_süsleme.jpg',
+    alt: 'Göcek marinasındaki yat için çiçek aranjmanı',
   },
   {
     number: '05',
@@ -48,6 +79,7 @@ const detailedServices: ServiceDetail[] = [
     description:
       'Kumsal düğünleri, tekne partileri, gala yemekleri ve butik davetler için mekana özel konsept çiçek dekorasyonu. Giriş kemerleri (arch), nikah seremonisi arka planları, şamdan ve masa çiçekleri ile unutulmaz bir atmosfer yaratıyoruz. Mekanın mimari dokusuna ve davet temanıza uygun uçtan uca anahtar teslim çiçek enstalasyonu.',
     image: '/düğün_süsleme.jpg',
+    alt: 'Göcek düğün organizasyonu için çiçek dekorasyonu',
   },
   {
     number: '06',
@@ -56,6 +88,7 @@ const detailedServices: ServiceDetail[] = [
     description:
       'Klasik, üstü açık ya da modern araçlarınıza uygun şık ve estetik araç süsleme hizmeti. Aracın boyasına zarar vermeyen özel vantuz ve sabitleme aparatları kullanılarak, sürüş esnasında formunu koruyan taze gül, okaliptüs ve saten tül detaylarıyla hazırlanır.',
     image: '/araba_süsleme.jpg',
+    alt: 'Göcek düğünü için gelin arabası çiçek süslemesi',
   },
   {
     number: '07',
@@ -64,17 +97,29 @@ const detailedServices: ServiceDetail[] = [
     description:
       'Doğum günleri, evlilik teklifleri, cinsiyet partileri, baby shower ve özel kutlamalar için yüksek kaliteli helyum gazlı balon tasarımları. Çiçek detaylı balon kemerleri, pastel ve krom renk seçenekleri, kişiye özel harf ve rakam balon buketleri ile mekanlara neşeli ve büyüleyici bir görsellik katıyoruz.',
     image: '/balon_süsleme.jpg',
+    alt: 'Özel kutlama için helyum gazlı balon aranjmanı – Göcek',
   },
 ]
 
 export default function ServicesPage() {
+  const breadcrumbSchema = buildBreadcrumbSchema([
+    { name: 'Ana Sayfa', url: SITE_URL },
+    { name: 'Hizmetler', url: `${SITE_URL}/services` },
+  ])
+
   return (
     <RouteFrame>
+      <script
+        id="schema-breadcrumb-services"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
       <PageHero
         eyebrow="Hizmetlerimiz · Göcek"
         title={<>Çiçek Hizmetleri</>}
         image={imageSet.white}
-        alt="Sıcak doğal ışıkta beyaz çiçekler"
+        alt="Sıcak doğal ışıkta beyaz çiçekler – Göcek Marine Flowers"
       />
 
       <section className="section-shell route-services-detail">
@@ -82,11 +127,19 @@ export default function ServicesPage() {
           <div className="services-detail-intro">
             <h2 className="section-title">Ayrıcalıklı Çiçek Hizmetlerimiz</h2>
             <p className="services-lead">
-              Göcek merkezdeki çiçek atölyemizde bireysel hediye siparişlerinden tekne, villa ve davet organizasyonlarına kadar her zevke özel profesyonel çiçek tasarımları hazırlıyoruz.
+              Göcek merkezdeki çiçek atölyemizde bireysel hediye
+              siparişlerinden tekne, villa ve davet organizasyonlarına kadar
+              her zevke özel profesyonel çiçek tasarımları hazırlıyoruz.
             </p>
           </div>
           <div className="services-intro-brand">
-            <img src="/logo.png" alt="Göcek Marine Flowers Logo" className="services-intro-logo-img" />
+            <img
+              src="/logo.png"
+              alt="Göcek Marine Flowers Logo"
+              className="services-intro-logo-img"
+              width={120}
+              height={120}
+            />
           </div>
         </div>
 
@@ -94,7 +147,14 @@ export default function ServicesPage() {
           {detailedServices.map((service) => (
             <article className="service-detail-item" key={service.title}>
               <div className="service-detail-img-box">
-                <img src={service.image} alt={service.title} className="service-detail-img" />
+                <img
+                  src={service.image}
+                  alt={service.alt}
+                  className="service-detail-img"
+                  width={600}
+                  height={450}
+                  loading="lazy"
+                />
               </div>
               <div className="service-detail-content">
                 <span className="service-detail-badge">{service.number} · Hizmet</span>
@@ -113,11 +173,13 @@ export default function ServicesPage() {
           <p className="eyebrow">Göcek Marine Flowers</p>
           <h2 className="services-cta-title">Özel Bir Sipariş veya Proje Planlayalım</h2>
           <p className="services-cta-copy">
-            İster sevdikleriniz için taze bir buket, ister yatınız ya da davetiniz için konsept çiçek tasarımı olsun; bize WhatsApp'tan yazabilir veya telefonla anında ulaşabilirsiniz.
+            İster sevdikleriniz için taze bir buket, ister yatınız ya da
+            davetiniz için konsept çiçek tasarımı olsun; bize
+            WhatsApp&apos;tan yazabilir veya telefonla anında ulaşabilirsiniz.
           </p>
           <div className="services-cta-buttons">
             <a
-              href="https://wa.me/905352153000?text=Merhaba,%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+              href={`${BUSINESS.whatsapp}?text=Merhaba,%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.`}
               target="_blank"
               rel="noreferrer"
               className="services-cta-btn services-cta-wa"
@@ -127,11 +189,11 @@ export default function ServicesPage() {
               </svg>
               <span>WhatsApp ile İletişime Geçin</span>
             </a>
-            <a href="tel:+905352153000" className="services-cta-btn services-cta-call">
+            <a href={`tel:${BUSINESS.phone}`} className="services-cta-btn services-cta-call">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
               </svg>
-              <span>Ara: 0535 215 30 00</span>
+              <span>Ara: {BUSINESS.phoneFormatted}</span>
             </a>
           </div>
         </div>
