@@ -76,7 +76,9 @@ export default function Page() {
           muted
           playsInline
           preload="auto"
+          poster="/banner_poster.jpg"
         >
+          <source src="/banner.webm" type="video/webm" />
           <source src="/banner.mp4" type="video/mp4" />
         </video>
         <div className="hero-wash" />
