@@ -9,7 +9,7 @@ import { buildLocalBusinessSchema } from '@/lib/structured-data'
 
 export const metadata: Metadata = {
   title: {
-    absolute: `Göcek Marine Flowers | Göcek Çiçek Tasarım Stüdyosu & Butik Çiçek`,
+    absolute: `Göcek Çiçekçi | ${BUSINESS.name} – Göcek Çiçek & Çiçek Siparişi`,
   },
   description:
     'Göcek\'te taze buket, gelin çiçeği, villa, yat ve düğün çiçek tasarımları. Göcek Marine Flowers – Turgut Özal Cd. No:7, Göcek / Muğla.',
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     canonical: SITE_URL,
   },
   openGraph: {
-    title: `Göcek Marine Flowers | Göcek Çiçek Tasarım Stüdyosu`,
+    title: `Göcek Çiçekçi | ${BUSINESS.name}`,
     description:
       'Göcek\'te özel günler, kutlamalar ve sevdikleriniz için özenle hazırlanan taze çiçek ve aranjmanlar.',
     url: SITE_URL,
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
         url: '/about.png',
         width: 1200,
         height: 630,
-        alt: `${BUSINESS.name} – Göcek Çiçek Tasarım Stüdyosu`,
+        alt: `${BUSINESS.name} – Göcek Çiçekçi`,
       },
     ],
   },
@@ -121,7 +121,7 @@ export default function Page() {
             </p>
             <div style={{ display: 'flex', gap: '24px', flexWrap: 'wrap', marginTop: '8px' }}>
               <a className="text-link" href="/contact">Bize Ulaşın <ArrowUpRight size={13} /></a>
-              <a className="text-link" href="/gocek-cicekci">Göcek&apos;teki çiçek seçeneklerimiz <ArrowUpRight size={13} /></a>
+              <a className="text-link" href="/services">Tüm Hizmetlerimizi İnceleyin <ArrowUpRight size={13} /></a>
             </div>
           </div>
           <div className="intro-image image-frame">

@@ -138,8 +138,8 @@ export default function ServicesPage() {
               <a className="text-link" href="/works">
                 Tüm Çiçek Koleksiyonunu İnceleyin <ArrowUpRight size={13} />
               </a>
-              <a className="text-link" href="/gocek-cicekci">
-                Göcek&apos;te Çiçek Siparişi <ArrowUpRight size={13} />
+              <a className="text-link" href="/contact">
+                Hemen İletişime Geçin <ArrowUpRight size={13} />
               </a>
             </div>
           </div>

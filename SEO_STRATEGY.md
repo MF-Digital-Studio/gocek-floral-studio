@@ -4,75 +4,61 @@
 
 ---
 
-## 1. Keyword → Sayfa Mapping (Cannibalization Önleme)
+## 1. Keyword → Sayfa Mapping (Sade 5 Sayfa Mimarisi)
 
 | Keyword | Hedef Sayfa | Öncelik |
 |---|---|---|
-| Göcek çiçekçi | `/gocek-cicekci` | Primary |
-| Göcek çiçekçi | `/` (destekleyici) | Secondary |
-| Göcek çiçek | `/gocek-cicekci` | Primary |
-| Göcek buket | `/gocek-cicekci` | Primary |
-| Göcek çiçek aranjmanı | `/gocek-cicekci` | Primary |
-| Göcek çiçek siparişi | `/gocek-cicekci` | Primary |
+| Göcek çiçekçi | `/` (Ana Sayfa) | Primary |
+| Göcek çiçek | `/` (Ana Sayfa) | Primary |
+| Göcek çiçek siparişi | `/` (Ana Sayfa) | Primary |
+| Göcek buket | `/` & `/works` | Primary |
 | Göcek çiçek hizmetleri | `/services` | Primary |
-| Göcek gelin çiçeği | `/services` | Secondary |
-| Göcek yat marina çiçek | `/services` | Secondary |
-| Göcek düğün çiçek | `/services` | Secondary |
-| Göcek çiçek koleksiyon | `/works` | Primary |
-| Göcek Marine Flowers iletişim | `/contact` | Primary |
-
-> **Önemli:** Aynı keyword için birden fazla sayfa yarışmaması için internal linking ile otorite `/gocek-cicekci` sayfasına yönlendirilmiştir.
+| Göcek gelin çiçeği | `/services` | Primary |
+| Göcek yat marina çiçek | `/services` | Primary |
+| Göcek tekne çiçek servisi | `/services` | Primary |
+| Göcek düğün çiçek dekorasyonu | `/services` | Primary |
+| Göcek ev & villa çiçekleri | `/services` | Primary |
+| Göcek çiçek koleksiyonu | `/works` | Primary |
+| Göcek Marine Flowers hakkında | `/about` | Primary |
+| Göcek çiçekçi iletişim, adres, telefon | `/contact` | Primary |
 
 ---
 
 ## 2. URL Stratejisi
 
-| Sayfa | URL |
-|---|---|
-| Ana Sayfa | `/` |
-| Göcek Çiçekçi LP | `/gocek-cicekci` |
-| Hizmetler | `/services` |
-| Koleksiyon | `/works` |
-| Hakkımızda | `/about` |
-| İletişim | `/contact` |
-| Sitemap | `/sitemap.xml` |
-| Robots | `/robots.txt` |
-
-**Kural:** URL'ler küçük harf, tire (-) ile ayrılmış, Türkçe karakter içermeyen yapıda.
+| Sayfa | URL | Amaç |
+|---|---|---|
+| Ana Sayfa | `/` | Ana yerel SEO, marka ve sipariş merkezi |
+| Hizmetler | `/services` | 7 detaylı çiçek hizmeti rehberi |
+| Koleksiyon | `/works` | 12 seçkin ürün & buket portfolyosu |
+| Hakkımızda | `/about` | Kurumsal hikaye ve E-E-A-T güvenilirlik |
+| İletişim | `/contact` | Lokasyon, çalışma saatleri ve telefon |
+| Sitemap | `/sitemap.xml` | Arama motoru haritası |
+| Robots | `/robots.txt` | Tarama direktifleri |
 
 ---
 
 ## 3. Internal Linking Yapısı
 
 ```
-Ana Sayfa (/)
-├── → /gocek-cicekci (Göcek'teki çiçek seçeneklerimiz)
-├── → /services (Tüm hizmetlerimizi inceleyin)
-├── → /works (Tüm Koleksiyonu İncele)
-└── → /contact (Bize Ulaşın)
-
-/gocek-cicekci
-├── → /services (Tüm hizmetlerimizi inceleyin)
-├── → /works (Koleksiyon için her kart)
-├── → /about (Hakkımızda)
-└── → /contact (İletişim CTA)
-
-/about
-└── → /gocek-cicekci (Göcek'teki çiçek seçeneklerimizi keşfedin)
-
-/works
-└── → /gocek-cicekci (Göcek'teki çiçek seçeneklerimizi keşfedin)
-
-/services
-└── → /contact (CTA)
+                  ┌──────────────┐
+                  │  Ana Sayfa   │
+                  │     (/)      │
+                  └──────┬───────┘
+          ┌──────────────┼──────────────┐
+          │              │              │
+          ▼              ▼              ▼
+   ┌─────────────┐┌─────────────┐┌─────────────┐
+   │  /services  ││   /works    ││   /about    │
+   └──────┬──────┘└──────┬──────┘└──────┬──────┘
+          │              │              │
+          └──────────────┼──────────────┘
+                         │
+                         ▼
+                  ┌─────────────┐
+                  │  /contact   │
+                  └─────────────┘
 ```
-
-**Anchor Text Çeşitliliği (Doğal):**
-- "Göcek'teki çiçek seçeneklerimizi keşfedin"
-- "Tüm hizmetlerimizi inceleyin"
-- "Çiçekleri inceleyin"
-- "Bize Ulaşın"
-- "Mağazamızı görün"
 
 ---
 
@@ -82,9 +68,8 @@ Ana Sayfa (/)
 |---|---|---|
 | `Organization` | Global (layout) | Marka entity |
 | `WebSite` | Global (layout) | Site adı sinyali |
-| `Florist` (LocalBusiness) | `/`, `/gocek-cicekci` | Google Maps sinyali |
+| `Florist` (LocalBusiness) | `/` (Ana Sayfa) | Google Maps, coğrafi koordinat ve NAP |
 | `BreadcrumbList` | Tüm alt sayfalar | Navigasyon hiyerarşisi |
-| `FAQPage` | `/gocek-cicekci` | Rich result (SSS) |
 
 ---
 

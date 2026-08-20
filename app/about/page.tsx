@@ -63,8 +63,8 @@ export default function AboutPage() {
               masa dekorasyonu olsun; mevsime uygun en kaliteli taze
               çiçeklerle isteğinize ve zevkinize göre özenle hazırlıyoruz.
             </p>
-            <a className="text-link" href="/gocek-cicekci" style={{ marginTop: '8px', display: 'inline-block' }}>
-              Göcek&apos;teki çiçek seçeneklerimizi keşfedin <ArrowUpRight size={13} />
+            <a className="text-link" href="/services" style={{ marginTop: '8px', display: 'inline-block' }}>
+              Tüm çiçek hizmetlerimizi keşfedin <ArrowUpRight size={13} />
             </a>
           </div>
         </div>

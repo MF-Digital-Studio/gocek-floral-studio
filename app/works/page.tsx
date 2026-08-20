@@ -102,8 +102,8 @@ export default function WorksPage() {
           <a className="text-link" href="/services">
             Hizmet Detaylarını İnceleyin <ArrowUpRight size={13} />
           </a>
-          <a className="text-link" href="/gocek-cicekci">
-            Göcek&apos;teki çiçek seçeneklerimizi keşfedin <ArrowUpRight size={13} />
+          <a className="text-link" href="/contact">
+            Bize Ulaşın &amp; Sipariş Verin <ArrowUpRight size={13} />
           </a>
         </div>
       </section>

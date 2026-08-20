@@ -8,20 +8,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: SITE_URL,
       lastModified: now,
-      changeFrequency: 'monthly',
+      changeFrequency: 'weekly',
       priority: 1.0,
-    },
-    {
-      url: `${SITE_URL}/gocek-cicekci`,
-      lastModified: now,
-      changeFrequency: 'monthly',
-      priority: 0.9,
     },
     {
       url: `${SITE_URL}/services`,
       lastModified: now,
       changeFrequency: 'monthly',
-      priority: 0.8,
+      priority: 0.9,
     },
     {
       url: `${SITE_URL}/works`,
