@@ -1,27 +1,35 @@
 'use client'
 
 import { SiteFooter, SiteHeader } from '@/components/site-shell'
+import { FloralCornerTL, FloralCornerBR } from '@/components/floral-decorations'
 
 const works = [
-  { title: 'Aegean Light', meta: 'Private commission · Göcek', image: 'https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=1600&q=88', className: 'work-large' },
-  { title: 'Soft Geometry', meta: 'Space florals · 2024', image: 'https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1000&q=88', className: 'work-small' },
-  { title: 'The Garden Table', meta: 'Event design · Dalaman', image: 'https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&fit=crop&w=1000&q=88', className: 'work-small work-offset' },
-  { title: 'Wild Ceremony', meta: 'Wedding flowers · Kabak', image: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1400&q=88', className: 'work-wide' },
+  { title: 'Gül & Bahçe Buketi', meta: 'Renkli Kır Buketi · Göcek', image: '/flower-1.png' },
+  { title: 'Lilyum & Gerbera Aranjmanı', meta: 'Masa & Mekan Çiçeği · Göcek', image: '/flower-2.png' },
+  { title: 'Pembe Ortanca Buketi', meta: 'Taze Ortanca · Göcek', image: '/flower-3.png' },
+  { title: 'Kırmızı Gül Buketi', meta: 'Özel Sipariş · Göcek', image: '/flower-4.png' },
+  { title: 'Orkide & Gerbera Vazo Tasarımı', meta: 'Vazo Aranjmanı · Göcek', image: '/flower-5.png' },
+  { title: 'Şakayık Sepet Aranjmanı', meta: 'Özel Gün Tasarımı · Göcek', image: '/flower-6.png' },
+  { title: 'Özel Saksı Orkide Aranjmanı', meta: 'Botanik Mekan Tasarımı · Göcek', image: '/flower-7.png' },
+  { title: 'Taze Şakayık Buketi', meta: 'Mevsim Çiçekleri · Göcek', image: '/flower-8.png' },
+  { title: 'Antoryum & Gül Buketi', meta: 'Egzotik Buket · Göcek', image: '/flower-9.png' },
+  { title: 'Beyaz Gül & Antoryum Buketi', meta: 'Özel Tasarım · Göcek', image: '/flower-10.png' },
+  { title: 'Mor Orkide & Sukulent Buketi', meta: 'Özel Tasarım · Göcek', image: '/flower-11.png' },
+  { title: 'Beyaz Şakayık & Bambu Aranjmanı', meta: 'Masa & Vazo Tasarımı · Göcek', image: '/flower-12.png' },
 ]
 
 const services = [
-  ['01', 'Floral Design', 'Custom bouquets, arrangements and floral compositions shaped around a feeling, a place, or a person.'],
-  ['02', 'Weddings & Events', 'Floral styling with a point of view — from intimate celebrations to days that ask for more.'],
-  ['03', 'Space Florals', 'Living compositions for hotels, restaurants, villas and private spaces across the coast.'],
-  ['04', 'Bespoke Design', 'A considered floral language developed specifically for your occasion, client or space.'],
+  ['01', 'Özel Çiçek Buketleri', 'Doğum günleri, yıldönümleri, tebrikler ve sevdikleriniz için mağazamızda özenle hazırlanan günlük taze buketler.'],
+  ['02', 'Ev & Villa Çiçekleri', 'Yaşam alanlarınıza canlılık katan vazo aranjmanları, orkide ve taze masa düzenlemeleri.'],
+  ['03', 'Yat & Tekne Çiçekleri', 'Deniz konseptine uygun, uzun süre formunu ve tazeliğini koruyan özel tekne ve yat aranjmanları.'],
+  ['04', 'Düğün & Davet Tasarımı', 'Kutlamalar, partiler ve özel günler için kişiye ve mekana özel konsept çiçek dekorasyonu.'],
 ]
 
 const gallery = [
-  'https://images.unsplash.com/photo-1520763185298-1b434c919abe?auto=format&fit=crop&w=900&q=88',
-  'https://images.unsplash.com/photo-1495231916356-a86217efff12?auto=format&fit=crop&w=900&q=88',
-  'https://images.unsplash.com/photo-1455582916367-25f75bfc6710?auto=format&fit=crop&w=900&q=88',
-  'https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?auto=format&fit=crop&w=900&q=88',
-  'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=900&q=88',
+  '/flower-1.png',
+  '/flower-3.png',
+  '/flower-6.png',
+  '/flower-9.png',
 ]
 
 export default function Page() {
@@ -30,37 +38,156 @@ export default function Page() {
       <SiteHeader />
 
       <section id="home" className="hero">
-        <img className="hero-image" src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=2200&q=90" alt="Sculptural white flowers in warm natural light" />
+        <video
+          className="hero-video"
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <source src="/banner.mp4" type="video/mp4" />
+        </video>
         <div className="hero-wash" />
         <div className="hero-content">
-          <p className="eyebrow reveal reveal-one">Floral design studio · Göcek</p>
-          <h1 className="display-title reveal reveal-two">Flowers,<br /><em>designed</em><br />as moments.</h1>
-          <div className="hero-bottom reveal reveal-three"><p>Thoughtful floral work for meaningful occasions and beautiful spaces along the Aegean coast.</p><a className="circle-link" href="/works" aria-label="Explore our work">↘</a></div>
+          <p className="eyebrow reveal reveal-one">Çiçek Tasarımı · Göcek</p>
+          <h1 className="display-title reveal reveal-two">
+            <span className="title-brand">Göcek</span>
+            <span className="title-sub">Marine Flowers</span>
+          </h1>
+          <div className="hero-bottom reveal reveal-three">
+            <p>Sevdikleriniz için özel hediye buketlerinden ev, villa ve tekneler için özenle hazırlanan taze çiçek tasarımları.</p>
+            <a className="circle-link" href="/works" aria-label="Koleksiyonu inceleyin">↘</a>
+          </div>
         </div>
-        <div className="scroll-note">Scroll to explore <span>↓</span></div>
       </section>
 
       <section id="about" className="intro section-shell">
-        <div className="section-kicker"><span>01</span><span>Our philosophy</span></div>
-        <div className="intro-grid"><h2 className="section-title">Flowers are<br /><em>more than</em><br />decoration.</h2><div className="intro-copy"><p className="lead">We create floral atmospheres that stay with you.</p><p>At Lume, every stem has a role. We look to the landscape, the light and the character of a space to make arrangements that feel effortless, personal and alive.</p><a className="text-link" href="/contact">Discover the studio <span>↗</span></a></div><div className="intro-image image-frame"><img src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=1100&q=88" alt="Pink flowers arranged in a simple glass vase" /></div></div>
+        <FloralCornerTL />
+        <FloralCornerBR />
+        <div className="section-kicker"><span>01</span><span>Hakkımızda</span></div>
+        <div className="intro-grid">
+          <div className="intro-copy">
+            <h2 className="section-title">Hakkımızda</h2>
+            <p className="lead">Göcek merkezdeki mağazamızda sevdikleriniz için özel buketler ve mekana uygun taze çiçek tasarımları hazırlıyoruz.</p>
+            <p>Göcek Marine Flowers olarak; doğum günü, kutlama ve yıldönümü gibi özel anlar için şık hediye buketlerinden eviniz, tekneniz ya da davetleriniz için taze çiçeklere kadar her zevke ve ihtiyaca uygun aranjmanlar tasarlıyoruz.</p>
+            <p>Her siparişte mevsimin en taze ve kaliteli çiçeklerini özenle seçiyor, siparişlerinizi Göcek merkezdeki mağazamızda tam vaktinde hazır ediyoruz.</p>
+            <a className="text-link" href="/contact">Bize Ulaşın <span>↗</span></a>
+          </div>
+          <div className="intro-image image-frame">
+            <img src="/about.png" alt="Göcek Marine Flowers" />
+          </div>
+        </div>
       </section>
 
       <section id="works" className="works section-shell">
-        <div className="section-heading"><div className="section-kicker"><span>02</span><span>Selected works</span></div><h2 className="section-title">A collection of<br /><em>quiet gestures.</em></h2><a className="text-link desktop-only" href="/contact">View all works <span>↗</span></a></div>
-        <div className="works-grid">{works.map((work) => <a className={`work-item ${work.className}`} href="/contact" key={work.title}><div className="work-image image-frame"><img src={work.image} alt={work.title} /></div><div className="work-caption"><h3>{work.title}</h3><p>{work.meta}</p><span>↗</span></div></a>)}</div>
+        <div className="section-heading">
+          <div>
+            <div className="section-kicker"><span>02</span><span>Çalışmalarımız</span></div>
+            <h2 className="section-title">Koleksiyon</h2>
+          </div>
+          <a className="text-link desktop-only" href="/works">Tüm Çalışmalar <span>↗</span></a>
+        </div>
+        <div className="works-grid">
+          {works.slice(0, 8).map((work) => (
+            <a className="work-item" href="/works" key={work.title}>
+              <div className="work-image image-frame">
+                <img src={work.image} alt={work.title} />
+              </div>
+              <div className="work-caption">
+                <div>
+                  <h3>{work.title}</h3>
+                  <p>{work.meta}</p>
+                </div>
+                <span>↗</span>
+              </div>
+            </a>
+          ))}
+        </div>
+        <div className="works-bottom-action" style={{ textAlign: 'center', marginTop: '48px' }}>
+          <a className="text-link" href="/works">Tüm Koleksiyonu İncele (12) <span>↗</span></a>
+        </div>
       </section>
 
-      <section id="services" className="services section-shell"><div className="section-kicker"><span>03</span><span>What we do</span></div><div className="services-top"><h2 className="section-title">Designed for<br /><em>meaningful</em><br />occasions.</h2><p>From a single considered arrangement to an entire floral world, our work begins with listening.</p></div><div className="service-list">{services.map(([number, title, copy]) => <article className="service-row" key={title}><span className="service-number">{number}</span><h3>{title}</h3><p>{copy}</p><span className="service-arrow">↗</span></article>)}</div></section>
+      <section id="services" className="services section-shell">
+        <div className="services-top">
+          <div>
+            <div className="section-kicker"><span>03</span><span>Hizmetler</span></div>
+            <h2 className="section-title">Hizmetlerimiz</h2>
+          </div>
+          <p className="services-lead">Bireysel hediyelik buketlerden villa, tekne ve davet organizasyonlarına kadar mağazamızda hazırlanan taze çiçek tasarımları.</p>
+        </div>
+        <div className="service-list">
+          {services.map(([number, title, copy]) => (
+            <article className="service-row" key={title}>
+              <span className="service-number">{number}</span>
+              <h3>{title}</h3>
+              <p>{copy}</p>
+              <span className="service-arrow">↗</span>
+            </article>
+          ))}
+        </div>
+      </section>
 
-      <section className="statement"><img src="https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=2200&q=88" alt="Sunlit botanical leaves" /><div className="statement-overlay"><p className="eyebrow">The Lume approach</p><h2>Thoughtfully arranged.<br /><em>Naturally unforgettable.</em></h2></div></section>
+      <section className="statement">
+        <img src="/flower-7.png" alt="Doğal botanik yapraklar" onError={(e) => { e.currentTarget.style.display = 'none' }} />
+        <div className="statement-overlay">
+          <p className="eyebrow">Göcek Marine Flowers</p>
+          <h2>Doğal ve Zamansız Çiçek Tasarımları</h2>
+        </div>
+      </section>
 
-      <section className="studio section-shell"><div className="studio-image image-frame"><img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=1400&q=88" alt="Floral arrangement in a sunlit studio" /></div><div className="studio-copy"><div className="section-kicker"><span>04</span><span>The studio</span></div><h2 className="section-title">A small studio<br />with a love for<br /><em>beautiful details.</em></h2><p>We are a floral design studio rooted in Göcek and inspired by the Aegean. Our practice is slow, curious and led by a deep respect for the natural character of every flower.</p><a className="text-link" href="/contact">Meet the studio <span>↗</span></a></div></section>
+      <section className="studio section-shell">
+        <div className="studio-image image-frame">
+          <img src="/about.png" alt="Göcek Marine Flowers Çiçek Mağazası" onError={(e) => { e.currentTarget.style.display = 'none' }} />
+        </div>
+        <div className="studio-copy">
+          <div className="section-kicker"><span>04</span><span>Mağazamız</span></div>
+          <h2 className="section-title">Mağazamız</h2>
+          <p>Göcek merkezdeki çiçek mağazamızda günlük taze buketlerden marina ve villa düzenlemelerine kadar geniş bir yelpazede hizmet veriyoruz. Bireysel hediye siparişlerinizde ve tüm özel anlarınızda en taze çiçekleri özenle hazırlıyoruz.</p>
+          <a className="text-link" href="/about">Hakkımızda Detaylı Bilgi <span>↗</span></a>
+        </div>
+      </section>
 
-      <section className="image-interlude"><img src="https://images.unsplash.com/photo-1471879832106-c7ab9e0cee23?auto=format&fit=crop&w=2200&q=88" alt="Greenery and sunlight in a Mediterranean garden" /></section>
+      <section className="gallery section-shell">
+        <div className="gallery-heading">
+          <div>
+            <div className="section-kicker"><span>05</span><span>Fotoğraflar</span></div>
+            <h2 className="section-title">Galeri</h2>
+          </div>
+          <a className="text-link" href="https://instagram.com" target="_blank" rel="noreferrer">Instagram'da Takip Edin <span>↗</span></a>
+        </div>
+        <div className="gallery-grid">
+          {gallery.map((image, index) => (
+            <div className="gallery-image image-frame" key={image}>
+              <img src={image} alt={`Galeri fotoğrafı ${index + 1}`} />
+            </div>
+          ))}
+        </div>
+      </section>
 
-      <section className="gallery section-shell"><div className="gallery-heading"><div><div className="section-kicker"><span>05</span><span>Notes from the studio</span></div><h2 className="section-title">From the studio,<br /><em>in moments.</em></h2></div><a className="text-link" href="https://instagram.com" target="_blank" rel="noreferrer">Follow on Instagram <span>↗</span></a></div><div className="gallery-grid">{gallery.map((image, index) => <div className={`gallery-image image-frame gallery-${index + 1}`} key={image}><img src={image} alt={`Floral detail from the studio ${index + 1}`} /></div>)}</div></section>
-
-      <section id="contact" className="contact"><div className="section-shell contact-inner"><div className="section-kicker"><span>06</span><span>Say hello</span></div><h2 className="section-title">Let&apos;s create<br /><em>something beautiful.</em></h2><div className="contact-details"><div><p className="eyebrow">Visit</p><p>Göcek, Muğla<br />Turkey</p></div><div><p className="eyebrow">Connect</p><a href="tel:+902524000000">+90 252 400 00 00</a><a href="https://wa.me/902524000000">WhatsApp ↗</a><a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram ↗</a></div><div><p className="eyebrow">Hours</p><p>Monday — Saturday<br />09:00 — 18:00</p></div></div><a className="contact-cta" href="mailto:hello@lumefloral.com">Get in touch <span>↗</span></a></div></section>
+      <section id="contact" className="contact">
+        <div className="section-shell contact-inner">
+          <div className="section-kicker"><span>06</span><span>Bize Ulaşın</span></div>
+          <h2 className="section-title">İletişim</h2>
+          <div className="contact-details">
+            <div>
+              <p className="eyebrow">Adres</p>
+              <p>Göcek, Muğla<br />Türkiye</p>
+            </div>
+            <div>
+              <p className="eyebrow">İletişim Bilgileri</p>
+              <a href="tel:+902524000000">+90 252 400 00 00</a>
+              <a href="https://wa.me/902524000000">WhatsApp ↗</a>
+              <a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram ↗</a>
+            </div>
+            <div>
+              <p className="eyebrow">Çalışma Saatleri</p>
+              <p>Pazartesi — Cumartesi<br />09:00 — 18:00</p>
+            </div>
+          </div>
+          <a className="contact-cta" href="mailto:info@gocekmarineflowers.com">İletişim <span>↗</span></a>
+        </div>
+      </section>
 
       <SiteFooter />
     </main>

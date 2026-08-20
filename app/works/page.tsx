@@ -1,5 +1,46 @@
 import { RouteFrame, PageHero, imageSet } from '@/components/site-shell'
 
-const works = [['Aegean Light', 'Private commission · Göcek', imageSet.white], ['Soft Geometry', 'Space florals · 2024', imageSet.studio], ['The Garden Table', 'Event design · Dalaman', imageSet.garden], ['Wild Ceremony', 'Wedding flowers · Kabak', imageSet.ceremony]]
+const works = [
+  ['Gül & Bahçe Buketi', 'Renkli Kır Buketi · Göcek', '/flower-1.png'],
+  ['Lilyum & Gerbera Aranjmanı', 'Masa & Mekan Çiçeği · Göcek', '/flower-2.png'],
+  ['Pembe Ortanca Buketi', 'Taze Ortanca · Göcek', '/flower-3.png'],
+  ['Kırmızı Gül Buketi', 'Özel Sipariş · Göcek', '/flower-4.png'],
+  ['Orkide & Gerbera Vazo Tasarımı', 'Vazo Aranjmanı · Göcek', '/flower-5.png'],
+  ['Şakayık Sepet Aranjmanı', 'Özel Gün Tasarımı · Göcek', '/flower-6.png'],
+  ['Özel Saksı Orkide Aranjmanı', 'Botanik Mekan Tasarımı · Göcek', '/flower-7.png'],
+  ['Taze Şakayık Buketi', 'Mevsim Çiçekleri · Göcek', '/flower-8.png'],
+  ['Antoryum & Gül Buketi', 'Egzotik Buket · Göcek', '/flower-9.png'],
+  ['Beyaz Gül & Antoryum Buketi', 'Özel Tasarım · Göcek', '/flower-10.png'],
+  ['Mor Orkide & Sukulent Buketi', 'Özel Tasarım · Göcek', '/flower-11.png'],
+  ['Beyaz Şakayık & Bambu Aranjmanı', 'Masa & Vazo Tasarımı · Göcek', '/flower-12.png'],
+]
 
-export default function WorksPage() { return <RouteFrame><PageHero eyebrow="Selected works · Floral stories" title={<>A collection of<br /><em>quiet gestures.</em></>} image={imageSet.ceremony} alt="Floral ceremony installation" /><section className="section-shell route-works"><div className="route-intro"><p className="eyebrow">Selected commissions</p><p>Arrangements, celebrations and spaces shaped by the character of their setting.</p></div><div className="works-grid">{works.map(([title, meta, image], index) => <a className={`work-item ${index % 2 ? 'work-small' : 'work-large'}`} href="/contact" key={title}><div className="work-image image-frame"><img src={image} alt={title} /></div><div className="work-caption"><h3>{title}</h3><p>{meta}</p><span>↗</span></div></a>)}</div></section></RouteFrame> }
+export default function WorksPage() {
+  return (
+    <RouteFrame>
+      <PageHero eyebrow="Seçili Çalışmalar · Göcek" title={<>Koleksiyon</>} image={imageSet.ceremony} alt="Çiçekli tören enstalasyonu" />
+      <section className="section-shell route-works">
+        <div className="route-intro">
+          <p className="eyebrow">Seçili Projeler</p>
+          <p>Ortamın karakterine göre şekillenen aranjmanlar, özel davetler ve botanik mekan tasarımları.</p>
+        </div>
+        <div className="works-grid">
+          {works.map(([title, meta, image]) => (
+            <a className="work-item" href="/contact" key={title}>
+              <div className="work-image image-frame">
+                <img src={image} alt={title} />
+              </div>
+              <div className="work-caption">
+                <div>
+                  <h3>{title}</h3>
+                  <p>{meta}</p>
+                </div>
+                <span>↗</span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+    </RouteFrame>
+  )
+}

@@ -4,10 +4,10 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
 const nav = [
-  ['About', '/about'],
-  ['Services', '/services'],
-  ['Works', '/works'],
-  ['Contact', '/contact'],
+  ['Hakkımızda', '/about'],
+  ['Hizmetler', '/services'],
+  ['Çalışmalar', '/works'],
+  ['İletişim', '/contact'],
 ]
 
 export function SiteHeader() {
@@ -25,24 +25,34 @@ export function SiteHeader() {
 
   return <>
     <header className={`site-header ${scrolled ? 'is-scrolled' : ''}`}>
-      <Link className="wordmark" href="/" onClick={close}>LUME <span>Floral Studio</span></Link>
-      <nav className="desktop-nav" aria-label="Main navigation">
-        <Link href="/">Home</Link>
+      <Link className="site-logo-link" href="/" onClick={close} aria-label="Göcek Marine Flowers Ana Sayfa">
+        <img className="site-logo-img" src="/logo.png" alt="Göcek Marine Flowers Logo" />
+      </Link>
+      <nav className="desktop-nav" aria-label="Ana menü">
+        <Link href="/">Ana Sayfa</Link>
         {nav.map(([label, href]) => <Link key={href} href={href}>{label}</Link>)}
       </nav>
-      <Link className="header-contact" href="/contact">Start a conversation <span>↗</span></Link>
-      <button className={`menu-button ${menuOpen ? 'is-open' : ''}`} onClick={() => setMenuOpen(!menuOpen)} aria-label={menuOpen ? 'Close menu' : 'Open menu'} aria-expanded={menuOpen}><i /><i /></button>
+      <Link className="header-contact" href="/contact">İletişime geçin <span>↗</span></Link>
+      <button className={`menu-button ${menuOpen ? 'is-open' : ''}`} onClick={() => setMenuOpen(!menuOpen)} aria-label={menuOpen ? 'Menüyü kapat' : 'Menüyü aç'} aria-expanded={menuOpen}><i /><i /></button>
     </header>
     <div className={`mobile-menu ${menuOpen ? 'is-open' : ''}`} aria-hidden={!menuOpen}>
-      <p className="eyebrow">Floral design studio · Göcek</p>
-      <nav aria-label="Mobile navigation"><Link href="/" onClick={close}>Home</Link>{nav.map(([label, href], index) => <Link style={{ transitionDelay: `${(index + 1) * 60}ms` }} key={href} href={href} onClick={close}>{label}</Link>)}</nav>
-      <div className="mobile-menu-footer"><span>Muğla, Turkey</span><a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram ↗</a></div>
+      <p className="eyebrow">Göcek Marine Flowers · Göcek</p>
+      <nav aria-label="Mobil menü"><Link href="/" onClick={close}>Ana Sayfa</Link>{nav.map(([label, href], index) => <Link style={{ transitionDelay: `${(index + 1) * 60}ms` }} key={href} href={href} onClick={close}>{label}</Link>)}</nav>
+      <div className="mobile-menu-footer"><span>Muğla, Türkiye</span><a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram ↗</a></div>
     </div>
   </>
 }
 
 export function SiteFooter() {
-  return <footer><Link className="wordmark" href="/">LUME <span>Floral Studio</span></Link><p>Flowers, designed as moments.</p><div><Link href="/services">Services</Link><Link href="/works">Works</Link><Link href="https://instagram.com" target="_blank" rel="noreferrer">Instagram ↗</Link></div><small>© {new Date().getFullYear()} Lume Floral Studio · Göcek, Turkey</small></footer>
+  return <footer>
+    <Link className="site-logo-link" href="/">
+      <img className="site-logo-img" src="/logo.png" alt="Göcek Marine Flowers Logo" />
+      <span className="wordmark">GÖCEK <span>Marine Flowers</span></span>
+    </Link>
+    <p>Doğal ve zamansız marin çiçek tasarımları.</p>
+    <div><Link href="/services">Hizmetler</Link><Link href="/works">Çalışmalar</Link><Link href="https://instagram.com" target="_blank" rel="noreferrer">Instagram ↗</Link></div>
+    <small>© {new Date().getFullYear()} Göcek Marine Flowers · Göcek, Türkiye</small>
+  </footer>
 }
 
 export function RouteFrame({ children }: { children: React.ReactNode }) {
@@ -50,12 +60,29 @@ export function RouteFrame({ children }: { children: React.ReactNode }) {
 }
 
 export const imageSet = {
-  studio: 'https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=1400&q=88',
-  garden: 'https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=1800&q=88',
-  ceremony: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1600&q=88',
-  white: 'https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=1600&q=88',
+  studio: '/about.png',
+  garden: '/flower-8.png',
+  ceremony: '/flower-1.png',
+  white: '/flower-5.png',
 }
 
-export function PageHero({ eyebrow, title, image, alt }: { eyebrow: string; title: React.ReactNode; image: string; alt: string }) {
-  return <section className="route-hero"><img src={image} alt={alt} /><div className="hero-wash" /><div className="route-hero-content"><p className="eyebrow">{eyebrow}</p><h1 className="display-title">{title}</h1></div></section>
+export function PageHero({ eyebrow, title, image, alt }: { eyebrow: string; title: React.ReactNode; image?: string; alt?: string }) {
+  return (
+    <section className="route-hero">
+      {image && (
+        <img
+          src={image}
+          alt={alt || ''}
+          onError={(e) => {
+            e.currentTarget.style.display = 'none'
+          }}
+        />
+      )}
+      <div className="hero-wash" />
+      <div className="route-hero-content">
+        <p className="eyebrow">{eyebrow}</p>
+        <h1 className="display-title">{title}</h1>
+      </div>
+    </section>
+  )
 }

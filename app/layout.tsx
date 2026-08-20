@@ -1,26 +1,50 @@
 import { Analytics } from '@vercel/analytics/next'
-import { Cormorant_Garamond, DM_Sans } from 'next/font/google'
+import { Bebas_Neue, Cormorant_Garamond, Inter } from 'next/font/google'
 import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
-const cormorant = Cormorant_Garamond({ subsets: ['latin'], variable: '--font-editorial' })
-const dmSans = DM_Sans({ subsets: ['latin'], variable: '--font-body' })
+const bebas = Bebas_Neue({
+  weight: '400',
+  subsets: ['latin', 'latin-ext'],
+  variable: '--font-editorial',
+  display: 'swap',
+})
+
+const cormorant = Cormorant_Garamond({
+  weight: ['400', '500', '600', '700'],
+  style: ['normal', 'italic'],
+  subsets: ['latin', 'latin-ext'],
+  variable: '--font-serif-italic',
+  display: 'swap',
+})
+
+const inter = Inter({
+  subsets: ['latin', 'latin-ext'],
+  variable: '--font-body',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
-  title: 'Lume Floral Studio — Göcek',
-  description: 'A boutique floral design studio creating thoughtful arrangements and floral experiences on the Aegean coast.',
-  generator: 'v0.app',
+  title: 'Göcek Marine Flowers — Göcek',
+  description: 'Göcek\'te özel buketler, yat ve mekanlar için tasarlanmış seçkin çiçek tasarımları.',
+  icons: {
+    icon: '/icon.svg',
+    apple: '/apple-icon.png',
+  },
 }
 
 export const viewport: Viewport = {
   colorScheme: 'light',
-  themeColor: '#f5f2eb',
+  themeColor: '#edd4cc',
 }
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className="bg-background">
-      <body className={`${cormorant.variable} ${dmSans.variable} antialiased`}>{children}{process.env.NODE_ENV === 'production' && <Analytics />}</body>
+    <html lang="tr" className="bg-background">
+      <body className={`${bebas.variable} ${cormorant.variable} ${inter.variable} antialiased`}>
+        {children}
+        {process.env.NODE_ENV === 'production' && <Analytics />}
+      </body>
     </html>
   )
 }
