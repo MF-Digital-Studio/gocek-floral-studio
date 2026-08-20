@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { PageHero, RouteFrame, imageSet } from '@/components/site-shell'
+import { OrderCta, PageHero, RouteFrame, imageSet } from '@/components/site-shell'
 import { BUSINESS, SITE_URL } from '@/lib/seo-config'
 
 export const metadata: Metadata = {
@@ -93,25 +93,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Unified Bottom CTA */}
-      <section className="services-cta-section">
-        <div className="services-cta-card">
-          <span className="section-kicker" style={{ color: 'rgba(28, 40, 51, 0.7)' }}>Göcek Marine Flowers</span>
-          <h2 className="services-cta-title">Çiçek Siparişiniz İçin Bize Ulaşın</h2>
-          <p className="services-cta-copy">
-            Bireysel hediye buketleriniz, villa ve tekne siparişleriniz için
-            WhatsApp&apos;tan yazabilir veya atölyemize uğrayabilirsiniz.
-          </p>
-          <div className="services-cta-buttons">
-            <a href={BUSINESS.whatsapp} target="_blank" rel="noreferrer" className="services-cta-btn services-cta-wa">
-              WhatsApp&apos;tan Yazın ↗
-            </a>
-            <a href="/contact" className="services-cta-btn services-cta-call">
-              İletişim &amp; Konum ↗
-            </a>
-          </div>
-        </div>
-      </section>
+      <OrderCta />
     </RouteFrame>
   )
 }

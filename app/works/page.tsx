@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { RouteFrame, PageHero, imageSet } from '@/components/site-shell'
+import { OrderCta, RouteFrame, PageHero, imageSet } from '@/components/site-shell'
 import { BUSINESS, SITE_URL } from '@/lib/seo-config'
 import { buildBreadcrumbSchema } from '@/lib/structured-data'
 
@@ -98,6 +98,7 @@ export default function WorksPage() {
           </a>
         </div>
       </section>
+      <OrderCta />
     </RouteFrame>
   )
 }
