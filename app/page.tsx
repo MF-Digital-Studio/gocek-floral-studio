@@ -74,8 +74,7 @@ export default function Page() {
           loop
           muted
           playsInline
-          preload="metadata"
-          poster="/about.png"
+          preload="auto"
         >
           <source src="/banner.mp4" type="video/mp4" />
         </video>
