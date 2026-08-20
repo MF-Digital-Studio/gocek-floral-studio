@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { RouteFrame } from '@/components/site-shell'
+import { ArrowUpRight } from '@/components/icons'
 import { BUSINESS, SITE_URL } from '@/lib/seo-config'
 import {
   buildBreadcrumbSchema,
@@ -169,10 +170,10 @@ export default function GocekCicekciPage() {
             </p>
             <div style={{ display: 'flex', gap: '24px', flexWrap: 'wrap', marginTop: '8px' }}>
               <a className="text-link" href="/contact">
-                Bize Ulaşın <span>↗</span>
+                Bize Ulaşın <ArrowUpRight size={13} />
               </a>
               <a className="text-link" href="/services">
-                Tüm hizmetlerimizi inceleyin <span>↗</span>
+                Tüm hizmetlerimizi inceleyin <ArrowUpRight size={13} />
               </a>
             </div>
           </div>
@@ -186,7 +187,7 @@ export default function GocekCicekciPage() {
             <h2 className="section-title">Çiçek Hizmetlerimiz</h2>
           </div>
           <a className="text-link desktop-only" href="/services">
-            Tüm Hizmetler <span>↗</span>
+            Tüm Hizmetler <ArrowUpRight size={13} />
           </a>
         </div>
 
@@ -207,7 +208,7 @@ export default function GocekCicekciPage() {
                   <h3>{item.title}</h3>
                   <p>{item.desc}</p>
                 </div>
-                <span>↗</span>
+                <ArrowUpRight size={14} />
               </div>
             </a>
           ))}
@@ -236,7 +237,8 @@ export default function GocekCicekciPage() {
                 <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
                 <circle cx="12" cy="10" r="3"/>
               </svg>
-              <span>Konum &amp; Yol Tarifi ↗</span>
+              <span>Konum &amp; Yol Tarifi</span>
+              <ArrowUpRight size={13} />
             </div>
           </a>
         </div>
@@ -250,7 +252,7 @@ export default function GocekCicekciPage() {
           </p>
           <div className="studio-actions">
             <a className="text-link" href="/about">
-              Hakkımızda <span>↗</span>
+              Hakkımızda <ArrowUpRight size={13} />
             </a>
             <a
               className="text-link studio-map-link"
@@ -263,7 +265,7 @@ export default function GocekCicekciPage() {
                 <circle cx="12" cy="10" r="3"/>
               </svg>
               <span>Haritada Yol Tarifi Al</span>
-              <span>↗</span>
+              <ArrowUpRight size={13} />
             </a>
           </div>
         </div>

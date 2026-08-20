@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { OrderCta, PageHero, RouteFrame, imageSet } from '@/components/site-shell'
+import { ArrowUpRight } from '@/components/icons'
 import { BUSINESS, SITE_URL } from '@/lib/seo-config'
 
 export const metadata: Metadata = {
@@ -61,7 +62,7 @@ export default function AboutPage() {
               çiçeklerle isteğinize ve zevkinize göre özenle hazırlıyoruz.
             </p>
             <a className="text-link" href="/gocek-cicekci" style={{ marginTop: '8px', display: 'inline-block' }}>
-              Göcek&apos;teki çiçek seçeneklerimizi keşfedin <span>↗</span>
+              Göcek&apos;teki çiçek seçeneklerimizi keşfedin <ArrowUpRight size={13} />
             </a>
           </div>
         </div>

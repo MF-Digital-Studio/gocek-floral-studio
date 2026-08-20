@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { OrderCta, RouteFrame, PageHero, imageSet } from '@/components/site-shell'
+import { ArrowUpRight } from '@/components/icons'
 import { BUSINESS, SITE_URL } from '@/lib/seo-config'
 import { buildBreadcrumbSchema } from '@/lib/structured-data'
 
@@ -87,14 +88,14 @@ export default function WorksPage() {
                   <h3>{work.title}</h3>
                   <p>{work.meta}</p>
                 </div>
-                <span>↗</span>
+                <ArrowUpRight size={14} />
               </div>
             </a>
           ))}
         </div>
         <div style={{ textAlign: 'center', marginTop: '48px' }}>
           <a className="text-link" href="/gocek-cicekci">
-            Göcek&apos;teki çiçek seçeneklerimizi keşfedin <span>↗</span>
+            Göcek&apos;teki çiçek seçeneklerimizi keşfedin <ArrowUpRight size={13} />
           </a>
         </div>
       </section>

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { SiteHeader, SiteFooter, StickyQuickActions } from '@/components/site-shell'
+import { ArrowUpRight } from '@/components/icons'
 import { BUSINESS } from '@/lib/seo-config'
 
 export const metadata: Metadata = {
@@ -51,13 +52,13 @@ export default function NotFound() {
             }}
           >
             <a className="text-link" href="/">
-              Ana Sayfaya Dön <span>↗</span>
+              Ana Sayfaya Dön <ArrowUpRight size={13} />
             </a>
             <a className="text-link" href="/works">
-              Çiçekleri İncele <span>↗</span>
+              Çiçekleri İncele <ArrowUpRight size={13} />
             </a>
             <a className="text-link" href="/contact">
-              İletişime Geç <span>↗</span>
+              İletişime Geç <ArrowUpRight size={13} />
             </a>
           </div>
         </div>

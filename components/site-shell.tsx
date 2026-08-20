@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
+import { ArrowUpRight } from './icons'
 
 const nav = [
   ['Hakkımızda', '/about'],
@@ -31,7 +32,7 @@ export function SiteHeader() {
         <Link href="/">Ana Sayfa</Link>
         {nav.map(([label, href]) => <Link key={href} href={href}>{label}</Link>)}
       </nav>
-      <Link className="header-contact" href="/contact">İletişime geçin <span>↗</span></Link>
+      <Link className="header-contact" href="/contact">İletişime geçin <ArrowUpRight size={13} /></Link>
       <button className={`menu-button ${menuOpen ? 'is-open' : ''}`} onClick={() => setMenuOpen(!menuOpen)} aria-label={menuOpen ? 'Menüyü kapat' : 'Menüyü aç'} aria-expanded={menuOpen}><i /><i /></button>
     </header>
     <div className={`mobile-menu ${menuOpen ? 'is-open' : ''}`} aria-hidden={!menuOpen}>
@@ -41,7 +42,7 @@ export function SiteHeader() {
         {nav.map(([label, href], index) => <Link style={{ transitionDelay: `${(index + 1) * 60}ms` }} key={href} href={href} onClick={close}>{label}</Link>)}
         <Link href="/contact" onClick={close}>İletişim</Link>
       </nav>
-      <div className="mobile-menu-footer"><span>Muğla, Türkiye</span><a href="https://www.instagram.com/gocekmarineflowers/" target="_blank" rel="noreferrer">Instagram ↗</a></div>
+      <div className="mobile-menu-footer"><span>Muğla, Türkiye</span><a href="https://www.instagram.com/gocekmarineflowers/" target="_blank" rel="noreferrer">Instagram <ArrowUpRight size={12} /></a></div>
     </div>
   </>
 }
@@ -65,7 +66,7 @@ export function SiteFooter() {
         <Link href="/services">Hizmetler</Link>
         <Link href="/works">Çalışmalar</Link>
         <a href="https://www.instagram.com/gocekmarineflowers/" target="_blank" rel="noreferrer">
-          Instagram ↗
+          Instagram <ArrowUpRight size={12} />
         </a>
       </div>
     </footer>

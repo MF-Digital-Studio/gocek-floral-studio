@@ -56,6 +56,40 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .desktop-nav a { opacity: .95; transition: opacity .3s, color .3s; }
 .desktop-nav a:hover, .header-contact:hover { opacity: .6; }
 .header-contact span, .text-link span { font-size: 15px; margin-left: 6px; }
+
+/* Universal Arrow Vector & Emoji Fix */
+.arrow-svg {
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+  stroke: currentColor;
+  transition: transform 0.25s ease;
+}
+.text-link .arrow-svg { margin-left: 3px; }
+.text-link:hover .arrow-svg,
+.header-contact:hover .arrow-svg,
+.studio-map-link:hover .arrow-svg,
+.studio-img-link:hover .arrow-svg {
+  transform: translate(2px, -2px);
+}
+.circle-link .arrow-svg {
+  color: inherit;
+}
+.circle-link:hover .arrow-svg {
+  transform: translate(2px, 2px);
+}
+
+.circle-link,
+.text-link span,
+.work-caption span,
+.header-contact span,
+.studio-map-overlay-badge span,
+.studio-map-link span,
+.contact-underline-link span,
+.contact-pill span {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-variant-emoji: text;
+}
 .menu-button { background: none; border: 0; display: none; height: 32px; padding: 6px 0; width: 32px; z-index: 10001; color: inherit; cursor: pointer; }
 .menu-button i { background: currentColor; display: block; height: 1px; margin: 6px 0 6px auto; transition: transform .3s, width .3s; width: 24px; }
 .menu-button i:last-child { width: 16px; }

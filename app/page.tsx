@@ -3,6 +3,7 @@ import { SiteFooter, SiteHeader, StickyQuickActions } from '@/components/site-sh
 import { FloralCornerTL, FloralCornerBR } from '@/components/floral-decorations'
 import { ServicesSpotlight } from '@/components/services-spotlight'
 import { HomeScrollReveal } from '@/components/home-client'
+import { ArrowUpRight, ArrowDownRight } from '@/components/icons'
 import { BUSINESS, SITE_URL } from '@/lib/seo-config'
 import { buildLocalBusinessSchema } from '@/lib/structured-data'
 
@@ -87,7 +88,9 @@ export default function Page() {
               Göcek&apos;te özel günler, kutlamalar ve sevdikleriniz için
               özenle hazırlanan taze çiçek ve aranjmanlar.
             </p>
-            <a className="circle-link" href="/works" aria-label="Koleksiyonu inceleyin">↘</a>
+            <a className="circle-link" href="/works" aria-label="Koleksiyonu inceleyin">
+              <ArrowDownRight size={18} />
+            </a>
           </div>
         </div>
       </section>
@@ -114,8 +117,8 @@ export default function Page() {
               vaktinde hazır ediyoruz.
             </p>
             <div style={{ display: 'flex', gap: '24px', flexWrap: 'wrap', marginTop: '8px' }}>
-              <a className="text-link" href="/contact">Bize Ulaşın <span>↗</span></a>
-              <a className="text-link" href="/gocek-cicekci">Göcek&apos;teki çiçek seçeneklerimiz <span>↗</span></a>
+              <a className="text-link" href="/contact">Bize Ulaşın <ArrowUpRight size={13} /></a>
+              <a className="text-link" href="/gocek-cicekci">Göcek&apos;teki çiçek seçeneklerimiz <ArrowUpRight size={13} /></a>
             </div>
           </div>
           <div className="intro-image image-frame">
@@ -134,7 +137,7 @@ export default function Page() {
           <div>
             <h2 className="section-title">Koleksiyon</h2>
           </div>
-          <a className="text-link desktop-only" href="/works">Tüm Çalışmalar <span>↗</span></a>
+          <a className="text-link desktop-only" href="/works">Tüm Çalışmalar <ArrowUpRight size={13} /></a>
         </div>
         <div className="works-grid">
           {works.map((work) => (
@@ -153,13 +156,13 @@ export default function Page() {
                   <h3>{work.title}</h3>
                   <p>{work.meta}</p>
                 </div>
-                <span>↗</span>
+                <ArrowUpRight size={14} />
               </div>
             </a>
           ))}
         </div>
         <div className="works-bottom-action" style={{ textAlign: 'center', marginTop: '48px' }}>
-          <a className="text-link" href="/works">Tüm Koleksiyonu İncele (12) <span>↗</span></a>
+          <a className="text-link" href="/works">Tüm Koleksiyonu İncele (12) <ArrowUpRight size={13} /></a>
         </div>
       </section>
 
@@ -177,7 +180,7 @@ export default function Page() {
         <ServicesSpotlight />
         <div style={{ textAlign: 'center', marginTop: '40px' }}>
           <a className="text-link" href="/services">
-            Tüm hizmetlerimizi inceleyin <span>↗</span>
+            Tüm hizmetlerimizi inceleyin <ArrowUpRight size={13} />
           </a>
         </div>
       </section>
@@ -220,7 +223,8 @@ export default function Page() {
                 <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
                 <circle cx="12" cy="10" r="3"/>
               </svg>
-              <span>Konum &amp; Yol Tarifi ↗</span>
+              <span>Konum &amp; Yol Tarifi</span>
+              <ArrowUpRight size={13} />
             </div>
           </a>
         </div>
@@ -233,7 +237,7 @@ export default function Page() {
             anlarınızda en taze çiçekleri özenle hazırlıyoruz.
           </p>
           <div className="studio-actions">
-            <a className="text-link" href="/about">Hakkımızda Detaylı Bilgi <span>↗</span></a>
+            <a className="text-link" href="/about">Hakkımızda Detaylı Bilgi <ArrowUpRight size={13} /></a>
             <a
               className="text-link studio-map-link"
               href={BUSINESS.mapsUrl}
@@ -245,7 +249,7 @@ export default function Page() {
                 <circle cx="12" cy="10" r="3"/>
               </svg>
               <span>Haritada Yol Tarifi Al</span>
-              <span>↗</span>
+              <ArrowUpRight size={13} />
             </a>
           </div>
         </div>
@@ -263,7 +267,7 @@ export default function Page() {
               <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
             </svg>
             <span>Instagram&apos;da Takip Edin</span>
-            <span>↗</span>
+            <ArrowUpRight size={13} />
           </a>
         </div>
         <div className="gallery-grid">
@@ -311,7 +315,8 @@ export default function Page() {
                       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
                         <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
                       </svg>
-                      <span>WhatsApp ↗</span>
+                      <span>WhatsApp</span>
+                      <ArrowUpRight size={13} />
                     </a>
                   </div>
                 </div>
@@ -330,7 +335,7 @@ export default function Page() {
                     rel="noreferrer"
                     className="contact-underline-link"
                   >
-                    Google Maps Yol Tarifi <span>↗</span>
+                    Google Maps Yol Tarifi <ArrowUpRight size={13} />
                   </a>
                 </div>
               </div>
@@ -345,7 +350,7 @@ export default function Page() {
                   <span className="contact-label">Sosyal Medya</span>
                   <div style={{ marginTop: '4px' }}>
                     <a href={BUSINESS.instagram} target="_blank" rel="noreferrer" className="contact-underline-link">
-                      Instagram @gocekmarineflowers <span>↗</span>
+                      Instagram @gocekmarineflowers <ArrowUpRight size={13} />
                     </a>
                   </div>
                 </div>
