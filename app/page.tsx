@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { SiteFooter, SiteHeader, StickyQuickActions } from '@/components/site-shell'
 import { FloralCornerTL, FloralCornerBR } from '@/components/floral-decorations'
 import { ServicesSpotlight } from '@/components/services-spotlight'
-import { HomeScrollReveal } from '@/components/home-client'
+import { HomeScrollReveal, HeroVideoReveal } from '@/components/home-client'
 import { ArrowUpRight, ArrowDownRight } from '@/components/icons'
 import { BUSINESS, SITE_URL } from '@/lib/seo-config'
 import { buildLocalBusinessSchema } from '@/lib/structured-data'
@@ -68,6 +68,7 @@ export default function Page() {
       <SiteHeader />
 
       <section id="home" className="hero">
+        <HeroVideoReveal />
         <video
           className="hero-video"
           autoPlay

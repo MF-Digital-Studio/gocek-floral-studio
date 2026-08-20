@@ -6,7 +6,7 @@ import { buildBreadcrumbSchema } from '@/lib/structured-data'
 
 export const metadata: Metadata = {
   title: {
-    absolute: `İletişim & Konum – Turgut Özal Cd. No:7 | ${BUSINESS.name}`,
+    absolute: `İletişim & Konum | ${BUSINESS.name} – Göcek Çiçekçi`,
   },
   description:
     'Göcek Marine Flowers iletişim ve konum bilgileri. Turgut Özal Cd. No:7, Göcek / Muğla. Tel: 0535 215 30 00. Pazartesi–Cumartesi 09:00–18:00.',
