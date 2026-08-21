@@ -88,20 +88,6 @@ export const metadata: Metadata = {
     images: ['/about.webp'],
   },
 
-  icons: {
-    icon: [
-      { url: '/favicon.ico', sizes: 'any' },
-      { url: '/icon-192.png', type: 'image/png', sizes: '192x192' },
-    ],
-    shortcut: '/favicon.ico',
-    apple: [
-      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
-    ],
-    other: [
-      { rel: 'apple-touch-icon-precomposed', url: '/apple-touch-icon.png' },
-    ],
-  },
-
   manifest: '/site.webmanifest',
 
   alternates: {
