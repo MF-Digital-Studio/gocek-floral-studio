@@ -7,12 +7,11 @@ Tamamlananları `[x]` ile işaretleyin.
 
 ## 🌐 Domain & Teknik Altyapı
 
-- [x] **Domain tanımlandı:** `www.göcekmarineflowers.com`
-  - Teknik Punycode: `https://www.xn--gcekmarineflowers-zzb.com`
+- [x] **Domain tanımlandı:** `www.gocekmarineflowers.com`
   - `lib/seo-config.ts` ve sitemap / canonical / schema yapıları bu domaine bağlandı.
 - [x] `site.webmanifest` dosyasındaki `start_url`, `scope` ve `lang` alanları yapılandırıldı.
 - [ ] Hosting panelinde HTTPS (SSL) sertifikasının aktif olduğunu doğrulayın
-- [ ] Varsa `non-www` → `www` 301 yönlendirmesini hosting/DNS seviyesinde yapılandırın (tercih edilen format: `https://www.göcekmarineflowers.com`)
+- [ ] Varsa `non-www` → `www` 301 yönlendirmesini hosting/DNS seviyesinde yapılandırın (tercih edilen format: `https://www.gocekmarineflowers.com`)
 
 ---
 
@@ -20,7 +19,7 @@ Tamamlananları `[x]` ile işaretleyin.
 
 - [ ] [Google Search Console](https://search.google.com/search-console/) hesabı oluşturun veya giriş yapın
 - [ ] Sitenizi ekleyin ve **domain doğrulamasını** yapın (DNS TXT kaydı veya HTML dosyası ile)
-- [ ] `sitemap.xml` adresini Search Console'a gönderin: `https://www.xn--gcekmarineflowers-zzb.com/sitemap.xml`
+- [ ] `sitemap.xml` adresini Search Console'a gönderin: `https://www.gocekmarineflowers.com/sitemap.xml`
 - [ ] İlk tarama raporunu inceleyin
 - [ ] Kapsama (Coverage) raporu ile hangi sayfaların indekslendiğini kontrol edin
 

@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     url: SITE_URL,
     images: [
       {
-        url: '/about.png',
+        url: '/about.webp',
         width: 1200,
         height: 630,
         alt: `${BUSINESS.name} – Göcek Çiçekçi`,
@@ -33,21 +33,21 @@ export const metadata: Metadata = {
 }
 
 const works = [
-  { title: 'Gül & Bahçe Buketi', meta: 'Renkli Kır Buketi · Göcek', image: '/flower-1.png', alt: 'Göcek\'te hazırlanan renkli gül ve kır çiçeği buketi' },
-  { title: 'Lilyum & Gerbera Aranjmanı', meta: 'Masa & Mekan Çiçeği · Göcek', image: '/flower-2.png', alt: 'Göcek için lilyum ve gerbera masa aranjmanı' },
-  { title: 'Pembe Ortanca Buketi', meta: 'Taze Ortanca · Göcek', image: '/flower-3.png', alt: 'Taze pembe ortanca buketi' },
-  { title: 'Kırmızı Gül Buketi', meta: 'Özel Sipariş · Göcek', image: '/flower-4.png', alt: 'Özel sipariş kırmızı gül buketi – Göcek' },
-  { title: 'Orkide & Gerbera Vazo Tasarımı', meta: 'Vazo Aranjmanı · Göcek', image: '/flower-5.png', alt: 'Orkide ve gerbera vazo aranjmanı' },
-  { title: 'Şakayık Sepet Aranjmanı', meta: 'Özel Gün Tasarımı · Göcek', image: '/flower-6.png', alt: 'Özel gün için şakayık sepet aranjmanı' },
-  { title: 'Özel Saksı Orkide Aranjmanı', meta: 'Botanik Mekan Tasarımı · Göcek', image: '/flower-7.png', alt: 'Villa ve mekan için saksı orkide aranjmanı – Göcek' },
-  { title: 'Taze Şakayık Buketi', meta: 'Mevsim Çiçekleri · Göcek', image: '/flower-8.png', alt: 'Mevsim taze şakayık buketi – Göcek Marine Flowers' },
+  { title: 'Gül & Bahçe Buketi', meta: 'Renkli Kır Buketi · Göcek', image: '/flower-1.webp', alt: 'Göcek\'te hazırlanan renkli gül ve kır çiçeği buketi' },
+  { title: 'Lilyum & Gerbera Aranjmanı', meta: 'Masa & Mekan Çiçeği · Göcek', image: '/flower-2.webp', alt: 'Göcek için lilyum ve gerbera masa aranjmanı' },
+  { title: 'Pembe Ortanca Buketi', meta: 'Taze Ortanca · Göcek', image: '/flower-3.webp', alt: 'Taze pembe ortanca buketi' },
+  { title: 'Kırmızı Gül Buketi', meta: 'Özel Sipariş · Göcek', image: '/flower-4.webp', alt: 'Özel sipariş kırmızı gül buketi – Göcek' },
+  { title: 'Orkide & Gerbera Vazo Tasarımı', meta: 'Vazo Aranjmanı · Göcek', image: '/flower-5.webp', alt: 'Orkide ve gerbera vazo aranjmanı' },
+  { title: 'Şakayık Sepet Aranjmanı', meta: 'Özel Gün Tasarımı · Göcek', image: '/flower-6.webp', alt: 'Özel gün için şakayık sepet aranjmanı' },
+  { title: 'Özel Saksı Orkide Aranjmanı', meta: 'Botanik Mekan Tasarımı · Göcek', image: '/flower-7.webp', alt: 'Villa ve mekan için saksı orkide aranjmanı – Göcek' },
+  { title: 'Taze Şakayık Buketi', meta: 'Mevsim Çiçekleri · Göcek', image: '/flower-8.webp', alt: 'Mevsim taze şakayık buketi – Göcek Marine Flowers' },
 ]
 
 const gallery = [
-  { src: '/flower-1.png', alt: 'Göcek\'te hazırlanan renkli çiçek buketi' },
-  { src: '/flower-3.png', alt: 'Pembe ortanca buketi – Göcek çiçekçi' },
-  { src: '/flower-6.png', alt: 'Şakayık sepet aranjmanı – özel gün tasarımı' },
-  { src: '/flower-9.png', alt: 'Antoryum ve gül buketi – Göcek Marine Flowers' },
+  { src: '/flower-1.webp', alt: 'Göcek\'te hazırlanan renkli çiçek buketi' },
+  { src: '/flower-3.webp', alt: 'Pembe ortanca buketi – Göcek çiçekçi' },
+  { src: '/flower-6.webp', alt: 'Şakayık sepet aranjmanı – özel gün tasarımı' },
+  { src: '/flower-9.webp', alt: 'Antoryum ve gül buketi – Göcek Marine Flowers' },
 ]
 
 export default function Page() {
@@ -128,7 +128,7 @@ export default function Page() {
           </div>
           <div className="intro-image image-frame">
             <img
-              src="/about.png"
+              src="/about.webp"
               alt="Göcek Marine Flowers çiçek mağazası – Göcek, Muğla"
               width={600}
               height={750}
@@ -198,7 +198,7 @@ export default function Page() {
           muted
           playsInline
           preload="none"
-          poster="/gocek-marine-flowers-magaza.png"
+          poster="/gocek-marine-flowers-magaza.webp"
         >
           <source src="/dar_section_video.mp4" type="video/mp4" />
         </video>
@@ -218,7 +218,7 @@ export default function Page() {
             title="Google Maps'te Yol Tarifi Al – Göcek Marine Flowers"
           >
             <img
-              src="/gocek-marine-flowers-magaza.png"
+              src="/gocek-marine-flowers-magaza.webp"
               alt="Göcek Marine Flowers çiçek mağazası – Turgut Özal Cd., Göcek"
               width={800}
               height={600}

@@ -26,7 +26,7 @@ export function SiteHeader() {
   return <>
     <header className={`site-header ${scrolled ? 'is-scrolled' : ''} ${menuOpen ? 'has-mobile-open' : ''}`}>
       <Link className="site-logo-link" href="/" onClick={close} aria-label="Göcek Marine Flowers Ana Sayfa">
-        <img className="site-logo-img" src="/logo.png" alt="Göcek Marine Flowers Logo" />
+        <img className="site-logo-img" src="/logo.webp" alt="Göcek Marine Flowers Logo" />
       </Link>
       <nav className="desktop-nav" aria-label="Ana menü">
         <Link href="/">Ana Sayfa</Link>
@@ -51,7 +51,7 @@ export function SiteFooter() {
   return (
     <footer>
       <Link className="site-logo-link" href="/">
-        <img className="site-logo-img" src="/logo.png" alt="Göcek Marine Flowers Logo" />
+        <img className="site-logo-img" src="/logo.webp" alt="Göcek Marine Flowers Logo" />
         <span className="wordmark">GÖCEK <span>Marine Flowers</span></span>
       </Link>
 
@@ -185,10 +185,10 @@ export function RouteFrame({ children }: { children: React.ReactNode }) {
 }
 
 export const imageSet = {
-  studio: '/gocek-marine-flowers-magaza.png',
-  garden: '/flower-8.png',
-  ceremony: '/flower-1.png',
-  white: '/flower-5.png',
+  studio: '/gocek-marine-flowers-magaza.webp',
+  garden: '/flower-8.webp',
+  ceremony: '/flower-1.webp',
+  white: '/flower-5.webp',
 }
 
 export function PageHero({ eyebrow, title, image, alt }: { eyebrow: string; title: React.ReactNode; image?: string; alt?: string }) {

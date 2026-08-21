@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/about`,
     images: [
       {
-        url: '/about.png',
+        url: '/about.webp',
         width: 1200,
         height: 630,
         alt: `${BUSINESS.name} – Göcek Çiçek Mağazası`,
@@ -75,7 +75,7 @@ export default function AboutPage() {
         <div className="about-photos-grid">
           <div className="about-photo-card">
             <img
-              src="/gocek-marine-flowers-firma-sahibi.png"
+              src="/gocek-marine-flowers-firma-sahibi.webp"
               alt="Göcek Marine Flowers çiçekçi – Göcek'teki mağazamızdan"
               className="about-photo-img"
               width={600}
@@ -85,7 +85,7 @@ export default function AboutPage() {
           </div>
           <div className="about-photo-card">
             <img
-              src="/gocek-marine-flowers-magaza.png"
+              src="/gocek-marine-flowers-magaza.webp"
               alt="Göcek Marine Flowers çiçek mağazası – Turgut Özal Cd., Göcek"
               className="about-photo-img"
               width={600}

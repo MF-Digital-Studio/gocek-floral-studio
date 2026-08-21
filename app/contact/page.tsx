@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/contact`,
     images: [
       {
-        url: '/gocek-marine-flowers-magaza.png',
+        url: '/gocek-marine-flowers-magaza.webp',
         width: 1200,
         height: 630,
         alt: 'Göcek Marine Flowers çiçek mağazası – Turgut Özal Cd., Göcek',

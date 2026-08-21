@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/services`,
     images: [
       {
-        url: '/flower-5.png',
+        url: '/flower-5.webp',
         width: 1200,
         height: 630,
         alt: 'Göcek Marine Flowers çiçek hizmetleri',
@@ -45,7 +45,7 @@ const detailedServices: ServiceDetail[] = [
     lead: 'Sevdikleriniz için özenle seçilmiş mevsimin en taze ithal ve yerli çiçekleri.',
     description:
       'Doğum günleri, yıldönümleri, evlilik teklifleri ve sevdiklerinize özel anlar için Göcek merkezdeki atölyemizde günlük hazırlanan seçkin buketler. İthal güller, şakayıklar, ortancalar ve egzotik botanik yapraklar ile kişiye özel renk paletlerinde tasarlanır. Göcek içi ve çevresine aynı gün güvenilir teslimat seçeneği sunulmaktadır.',
-    image: '/flower-1.png',
+    image: '/flower-1.webp',
     alt: 'Göcek\'te hazırlanan özel gül ve kır çiçeği buketi',
   },
   {
@@ -145,7 +145,7 @@ export default function ServicesPage() {
           </div>
           <div className="services-intro-brand">
             <img
-              src="/logo.png"
+              src="/logo.webp"
               alt="Göcek Marine Flowers Logo"
               className="services-intro-logo-img"
               width={120}

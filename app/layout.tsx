@@ -73,7 +73,7 @@ export const metadata: Metadata = {
     siteName: BUSINESS.name,
     images: [
       {
-        url: '/about.png',
+        url: '/about.webp',
         width: 1200,
         height: 630,
         alt: `${BUSINESS.name} – Göcek Çiçekçi`,
@@ -85,7 +85,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@gocekmarineflowers',
     creator: '@gocekmarineflowers',
-    images: ['/about.png'],
+    images: ['/about.webp'],
   },
 
   icons: {

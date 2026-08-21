@@ -2,16 +2,14 @@
  * Merkezi SEO & Site Konfigürasyonu
  * Tüm sayfalarda tutarlı NAP (Name, Address, Phone) ve metadata için tek kaynak.
  *
- * Domain: www.göcekmarineflowers.com
- * Punycode (teknik SEO için): www.xn--gcekmarineflowers-zzb.com
+ * Domain: www.gocekmarineflowers.com
  *
- * Canonical, sitemap ve schema URL'lerinde punycode kullanıyoruz çünkü
- * Google Search Console, Bing ve diğer araçlar punycode formunu daha güvenilir işler.
- * Ziyaretçiler tarayıcıda unicode (göcek…) formunu görür — bu otomatik dönüşümdür.
+ * Canonical, sitemap ve schema URL'lerinde Türkçe karakter içermeyen
+ * www.gocekmarineflowers.com alan adını kullanıyoruz.
  */
 
 export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.xn--gcekmarineflowers-zzb.com'
+  process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.gocekmarineflowers.com'
 
 export const BUSINESS = {
   name: 'Göcek Marine Flowers',
@@ -57,6 +55,6 @@ export const BUSINESS = {
     'Göcek\'te taze çiçek buketleri, gelin el çiçekleri, ev & villa aranjmanları, yat & tekne çiçek servisi ve düğün organizasyonu.',
 
   // Logo / OG resmi
-  logo: `${process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.xn--gcekmarineflowers-zzb.com'}/logo.png`,
-  ogImage: `${process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.xn--gcekmarineflowers-zzb.com'}/about.png`,
+  logo: `${process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.gocekmarineflowers.com'}/logo.webp`,
+  ogImage: `${process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.gocekmarineflowers.com'}/about.webp`,
 } as const

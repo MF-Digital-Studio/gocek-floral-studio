@@ -14,7 +14,7 @@ export const servicesData: ServiceItem[] = [
     number: '01',
     title: 'Özel Çiçek Buketleri',
     desc: 'Doğum günleri, yıldönümleri, tebrikler ve sevdikleriniz için mağazamızda özenle hazırlanan günlük taze buketler.',
-    image: '/flower-1.png',
+    image: '/flower-1.webp',
   },
   {
     number: '02',
